@@ -1,0 +1,57 @@
+.icon {
+  &-default {
+    --current-size: 24px;
+    display: inline-flex;
+    width: var(--current-size);
+    min-width: var(--current-size);
+    height: var(--current-size);
+    min-height: var(--current-size);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &--xs {
+      --current-size: 16px;
+    }
+
+    &--sm {
+      --current-size: 20px;
+    }
+
+    &--md {
+      --current-size: 28px;
+    }
+
+    &--lg {
+      --current-size: 32px;
+    }
+
+    &--xl {
+      --current-size: 36px;
+    }
+  }
+}
+
+.icon-carousel {
+  --hover-color: #323B52;
+  --current-width: 32px;
+  --current-height: 18px;
+  display: inline-block;
+  width: var(--current-width);
+  min-width: var(--current-width);
+  height: var(--current-height);
+  min-height: var(--current-height);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    svg path {
+      fill: var(--hover-color);
+    }
+  }
+}

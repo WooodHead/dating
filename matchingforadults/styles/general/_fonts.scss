@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@font-face {
+  font-family: 'Palatino';
+  src: url('/fonts/Palatino/PalatinoLinotype-Roman.eot');
+  src: url('/fonts/Palatino/PalatinoLinotype-Roman.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/Palatino/PalatinoLinotype-Roman.woff2') format('woff2'),
+  url('/fonts/Palatino/PalatinoLinotype-Roman.woff') format('woff'),
+  url('/fonts/Palatino/PalatinoLinotype-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Palatino';
+  src: url('/fonts/Palatino/PalatinoLinotype-Bold.eot');
+  src: url('/fonts/Palatino/PalatinoLinotype-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/Palatino/PalatinoLinotype-Bold.woff2') format('woff2'),
+  url('/fonts/Palatino/PalatinoLinotype-Bold.woff') format('woff'),
+  url('/fonts/Palatino/PalatinoLinotype-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

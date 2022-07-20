@@ -1,0 +1,77 @@
+@import "styles/general/media";
+
+.card {
+  position: relative;
+  height: 0;
+  padding-top: 132%;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &::after {
+    @extend .content;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(47, 48, 73, 0.5);
+    z-index: 10;
+    cursor: pointer;
+    transition: .15s linear;
+  }
+
+  &:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: rgba(18, 18, 18, .5);
+}
+
+.online {
+  --size: 8px;
+  display: inline-block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
+  background-color: var(--green-600);
+  margin-left: 8px;
+}
+
+@include media("max", "lg") {
+  .details {
+    padding: 8px;
+  }
+}
+
+@include media("max", "xs") {
+  .details {
+    &__title, &__distance {
+      font-size: 12px;
+    }
+  }
+}

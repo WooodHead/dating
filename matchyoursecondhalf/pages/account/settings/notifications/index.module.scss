@@ -1,0 +1,51 @@
+@import "styles/general/media";
+
+.wrap {
+  margin-bottom: 60px;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.td {
+  display: flex;
+  padding: 12px 24px;
+}
+
+.table-mobile {
+
+  &__checkbox {
+    width: fit-content;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+  }
+
+  &__row ~ &__row {
+    margin-top: 16px;
+  }
+}
+
+@include media("max", "sm") {
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}
+
+@include media("max", "xs") {
+  .table-mobile {
+    &__row {
+      grid-template-columns: 1fr auto;
+    }
+  }
+}

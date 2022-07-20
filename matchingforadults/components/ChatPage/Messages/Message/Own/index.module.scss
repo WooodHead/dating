@@ -1,0 +1,27 @@
+@import "styles/general/media";
+
+.message-container {
+  margin-left: auto;
+  max-width: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.text-block {
+  color: var(--white);
+  background: #A27B9A;
+  border-radius: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@include media("max", "sm") {
+  .message-container {
+    max-width: 90%;
+  }
+}

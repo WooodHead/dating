@@ -1,0 +1,13 @@
+body {
+  font-family: var(--OpenSans);
+  font-size: var(--base-font-size);
+  color: var(--base-font-color);
+  line-height: var(--base-line-height);
+  background-color: var(--base-body-color);
+  overflow-y: scroll;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+

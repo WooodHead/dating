@@ -1,0 +1,71 @@
+@import '~rc-pagination/assets/index.css';
+
+.extend-button-style {
+  --size: 32px;
+  box-shadow: 8px 4px 16px rgba(41, 41, 41, 0.12);
+  border-radius: 8px;
+  width: var(--size);
+  height: var(--size);
+}
+
+.rc-pagination {
+  display: flex;
+  align-items: center;
+
+  &-options {
+    margin-left: 0;
+  }
+
+  &-prev,
+  &-next {
+    @extend .extend-button-style;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Gilroy);
+    margin: 0;
+  }
+
+  &-item,
+  &-jump-prev,
+  &-jump-next {
+    @extend .extend-button-style;
+    --item-size: 32px;
+    min-width: var(--item-size);
+    height: var(--item-size);
+    min-height: var(--item-size);
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 0 4px;
+    line-height: var(--item-size);
+    border: none;
+    color: var(--blue-900);
+    font-family: var(--OpenSans);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:focus {
+      border-color: var(--blue-700);
+    }
+
+    &:hover {
+      border-color: var(--blue-700);
+    }
+
+    &-active {
+      color: var(--white);
+      background-color: #6D98BD;
+
+      &:hover {
+        border-color: var(--blue-700);
+      }
+    }
+  }
+
+  &-disabled {
+    @extend .extend-button-style;
+    background: #F3FAFF;
+  }
+}

@@ -1,0 +1,38 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 16px 16px 32px;
+  background-color: #FCF8FA;
+  border-radius: 15px;
+  margin-bottom: 16px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+  &__avatar {
+    margin-right: 8px;
+  }
+
+  &__status-online {
+    color: var(--green-500);
+  }
+
+  &__status-offline {
+    color: var(--red-500);
+  }
+}
+
+.back {
+  display: none;
+}
+
+@include media("max", "md") {
+  .back {
+    display: flex;
+  }
+}

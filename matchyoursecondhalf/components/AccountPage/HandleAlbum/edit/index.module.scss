@@ -1,0 +1,80 @@
+@import "styles/general/media";
+
+.form {
+  display: flex;
+  margin-bottom: 66px;
+}
+
+.upload {
+  width: 220px;
+  min-width: 170px;
+}
+
+.input {
+  flex-basis: 50%;
+}
+
+.list {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+@include media("max", "md") {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .input {
+    flex-basis: 100%;
+  }
+
+  .input {
+    & > div:first-of-type {
+      max-width: none;
+    }
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+
+  .upload {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 470px) {
+  .form {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .upload {
+    width: 170px;
+  }
+
+  .input {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+}
+
+@include media("max", "xs") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

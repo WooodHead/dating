@@ -1,0 +1,27 @@
+@import "styles/general/media";
+
+.room {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 24px 24px 0 2px;
+  overflow: hidden;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: auto;
+}
+
+@include media("max", "md") {
+  .room {
+    grid-template-rows: 40px auto 1fr auto;
+  }
+}
+
+@include media("max", "sm") {
+  .room {
+    padding: 24px 0;
+  }
+}

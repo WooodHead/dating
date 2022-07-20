@@ -1,0 +1,24 @@
+@import "styles/general/media";
+
+.article {
+  max-width: 948px;
+  margin: 0 auto 86px;
+}
+
+@include media("max", "md") {
+  .wrap {
+    padding-left: 48px;
+    margin-left: 24px;
+  }
+}
+
+@include media("max", "sm") {
+  .wrap {
+    padding-left: 0;
+    margin-left: 0;
+  }
+
+  .article {
+    margin-bottom: 40px;
+  }
+}

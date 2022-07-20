@@ -1,0 +1,100 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  width: 100%;
+  max-width: 475px;
+  font-size: 40px;
+  margin-bottom: 16px;
+  color: var(--blue-900);
+  line-height: 1.6;
+}
+
+.text {
+  width: 100%;
+  max-width: 530px;
+  margin-bottom: 40px;
+  color: var(--blue-900);
+}
+
+.register-start {
+  &__button {
+    max-width: 344px;
+  }
+}
+
+.form-title {
+  margin-bottom: 40px;
+
+  .extend {
+    height: 4px;
+    border-radius: 50px;
+  }
+
+  &__progress {
+    width: 100%;
+    @extend .extend;
+    margin-top: 24px;
+    background: #D8D6EE;
+    position: relative;
+
+    &-inner {
+      @extend .extend;
+      background: var(--blue-800);
+      width: 50%;
+      transition: all 2s ease-in-out;
+
+    }
+  }
+}
+
+.width {
+  &--50 {
+    width: 50%;
+  }
+  &--100 {
+    width: 100%;
+  }
+}
+
+.img {
+  display: none;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@include media("max", "xl") {
+  .img {
+    display: block;
+  }
+}
+
+@include media("max", "lg") {
+  .img {
+    display: none;
+  }
+
+  .wrap {
+    justify-content: center;
+  }
+
+  .register-start {
+
+    &__button {
+      max-width: none;
+    }
+  }
+
+  .form {
+    max-width: 475px;
+  }
+}

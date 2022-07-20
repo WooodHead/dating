@@ -1,0 +1,104 @@
+@import "styles/general/media";
+
+.link {
+  position: relative;
+  margin-right: 48px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--pink-300);
+    transform: translateX(-50%);
+    transition: .1s linear;
+  }
+
+  &:hover:after {
+    width: 100%;
+  }
+
+  &__active {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.link-wrap {
+  display: flex;
+  align-items: center;
+
+  & > div:not(:last-child) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 24px;
+      width: 1px;
+      height: 17px;
+      background: #D8D6EE;
+    }
+  }
+}
+
+.menu {
+  display: none;
+}
+
+@include media("max", "lg") {
+  .link-wrap {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+
+@include media("max", "md") {
+  .link {
+    font-size: 14px;
+    margin-right: 24px;
+  }
+
+  .button-register, .button-login {
+    button {
+      min-width: 85px;
+      height: 37px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@include media("max", "sm") {
+  .link {
+    margin-right: 16px;
+  }
+
+  .button-register {
+    margin-right: 16px;
+  }
+
+  .button-register, .button-login {
+    button {
+      min-width: 70px;
+    }
+  }
+}
+
+@include media("max", "xs") {
+  .link {
+    display: none;
+  }
+}

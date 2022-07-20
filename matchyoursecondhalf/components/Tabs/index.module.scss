@@ -1,0 +1,32 @@
+.tabs {
+  display: flex;
+  align-items: flex-start;
+}
+
+.tab {
+  margin-right: 60px;
+  user-select: none;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: var(--blue-600);
+    border-radius: 2px;
+    transition: .15s linear;
+  }
+
+  &--active {
+    color: var(--blue-600);
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

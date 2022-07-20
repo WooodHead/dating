@@ -1,0 +1,12 @@
+@import "styles/general/media";
+
+.main {
+  position: relative;
+  display: flex;
+  min-height: 800px;
+  margin-top: var(--header-height);
+  @include media("max", "md") {
+    margin-top: var(--header-height-mobile);
+    min-height: calc(100vh - var(--header-height-mobile));
+  }
+}

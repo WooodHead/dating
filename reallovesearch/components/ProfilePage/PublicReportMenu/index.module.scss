@@ -1,0 +1,33 @@
+@import "styles/general/media";
+
+.add-menu {
+  position: relative;
+  z-index: 20;
+  padding: 10px;
+  margin-right: -10px;
+}
+
+.dropdown {
+  position: absolute;
+  top: -20px;
+  right: -19px;
+  width: 243px;
+  padding: 18px 20px;
+  border: 1px solid #E1E1E1;
+  border-radius: 10px;
+  background: var(--white);
+  z-index: 10;
+}
+
+.select {
+  & > div:first-of-type {
+    width: 100%;
+  }
+}
+
+@include media("max", "lg") {
+  .dropdown {
+    top: 0;
+    right: 100%;
+  }
+}

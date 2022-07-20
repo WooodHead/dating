@@ -1,0 +1,36 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media (max-width: 1199px) {
+    max-width: 960px;
+  }
+}
+
+.premium-plug-container {
+  position: relative;
+  height: 230px;
+  padding: 55px 0;
+  z-index: 3;
+  text-align: center;
+
+  .background-block {
+    display: block;
+    width: calc(100vw - 8px);
+    height: 270px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50vw);
+    background-color: rgba(231, 231, 231, 0.6);
+    z-index: -1;
+  }
+
+  .choose-plan-btn-container {
+    width: 350px;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+}

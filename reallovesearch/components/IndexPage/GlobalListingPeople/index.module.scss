@@ -1,0 +1,42 @@
+@import "styles/general/media";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+
+  &--filters-open {
+    padding-left: calc((var(--filters-width) + 32px));
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include media("max", "xl") {
+  .list {
+    &--filters-open {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@include media("max", "lg") {
+  .list {
+    &--filters-open {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+@include media("max", "md") {
+  .list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 11px;
+  }
+}

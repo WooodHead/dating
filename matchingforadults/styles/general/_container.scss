@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @media (max-width: 1199px) {
+    max-width: 960px;
+  }
+}
+
+.premium-plug-container {
+  position: relative;
+  height: 230px;
+  padding: 55px 0;
+  z-index: 3;
+  text-align: center;
+}
+
+.choose-plan-btn-container {
+  width: 350px;
+  max-width: 100%;
+  margin-top: 30px;
+}

@@ -1,0 +1,20 @@
+@import "styles/general/media";
+
+.main {
+  display: flex;
+  align-items: center;
+  background: top / cover no-repeat url(/img/auth/auth-reset-bg.jpg);
+  min-height: 800px;
+}
+
+@include media("max", "md") {
+  .main {
+    margin-top: var(--header-height-mobile);
+  }
+}
+
+@include media("max", "sm") {
+  .main {
+    min-height: auto;
+  }
+}

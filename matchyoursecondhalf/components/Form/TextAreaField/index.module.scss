@@ -1,0 +1,76 @@
+@mixin theme-colors($dark-theme: false) {
+  @if $dark-theme {
+    --color-label: var(--grey-400);
+    --color-border: var(--gold-400);
+    --color-field-text: var(--white);
+    --color-field-bg: transparent;
+  } @else {
+    --color-label: var(--blue-900);
+    --color-border: var(--pink-100);
+    --color-field-text: var(--black-800);
+    --color-field-bg: rgba(250, 250, 250, 0.3);
+  }
+}
+
+.wrap {
+  @include theme-colors($dark-theme: false);
+  &--dark {
+    @include theme-colors($dark-theme: true);
+  }
+}
+
+.label {
+  color: var(--color-label);
+  margin-bottom: 2px;
+  margin-left: 16px;
+}
+
+.input {
+  position: relative;
+}
+
+.field {
+  display: block;
+  width: auto;
+  min-height: 80px;
+  color: var(--color-field-text);
+  background-color: var(--color-field-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+
+  &--lg {
+    min-height: 270px;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--error {
+    border-color: var(--red-500);
+  }
+}
+
+//.icon {
+//  position: absolute;
+//  top: 50%;
+//  right: 12px;
+//  display: flex;
+//  transform: translateY(-50%);
+//
+//  &--password {
+//    right: 4px;
+//  }
+//}
+
+.helper-text {
+  min-height: 16px;
+  margin: 4px 0;
+}
+
+.error {
+  min-height: 16px;
+  color: var(--red-500);
+  margin: 4px 0;
+}

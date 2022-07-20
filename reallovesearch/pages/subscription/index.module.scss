@@ -1,0 +1,37 @@
+@import "styles/general/media";
+
+.wrap {
+  align-self: flex-start;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: rgba(234, 238, 247, 0.94);
+    z-index: 10;
+    min-height: 800px;
+  }
+}
+
+.inner-wrap {
+  max-width: 930px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 20;
+}
+
+.plans {
+  margin-bottom: 0;
+}
+
+@include media("max", "md") {
+  .button-wrap {
+    justify-content: flex-start;
+  }
+}

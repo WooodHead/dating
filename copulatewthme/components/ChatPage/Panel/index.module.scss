@@ -1,0 +1,57 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 8px;
+  align-items: flex-end;
+}
+
+.field {
+  position: relative;
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    padding: 16px 40px 16px 16px;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    background: #F4F5F7;
+  }
+
+  &__emoji-switcher {
+    width: 32px;
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+
+  &__emoji-complete {
+    width: 28px;
+    position: absolute;
+    bottom: 10px;
+    right: 48px;
+    cursor: pointer;
+  }
+
+  &__emoji-picker {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+  }
+}
+
+.send-btn {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F4F5F7;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--disabled {
+    pointer-events: none;
+  }
+}

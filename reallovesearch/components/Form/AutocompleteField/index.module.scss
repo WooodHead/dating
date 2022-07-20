@@ -1,0 +1,157 @@
+.wrap {
+  --color-field: var(--blue-900);
+  --color-border: var(--blue-200);
+  --color-label: var(--blue-900);
+  --color-hover: var(--blue-900);
+  --bg-color-hover: var(--blue-200);
+  --bg-color-dropdown: var(--white);
+  --placeholder-color: var(--black-800);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &--dark {
+    --color-border: var(--pink-300);
+    --color-label: var(--grey-400);
+  }
+
+  &--text-white {
+    --color-field: var(--white);
+    --bg-color-dropdown: var(--black-800);
+    --placeholder-color: var(--grey-600);
+  }
+}
+
+.label {
+  color: var(--color-label);
+  margin-bottom: 2px;
+}
+
+.autocomplete {
+  position: relative;
+  display: inline-flex;
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--xs {
+    width: 80px;
+    min-width: 80px;
+  }
+
+  &--sm {
+    width: 130px;
+    min-width: 130px;
+  }
+
+  &--lg {
+    width: 325px;
+    min-width: 325px;
+  }
+}
+
+.field {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: var(--color-field);
+
+  &__prepend-icon {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 16px;
+    width: 28px;
+    height: 20px;
+  }
+
+  &--error {
+    border-color: var(--red-500);
+  }
+
+  &--prepend-icon {
+    padding: 12px 16px 12px 52px;
+  }
+
+  &--clear-button {
+    padding-right: 35px;
+  }
+
+  &::placeholder {
+    color: var(--placeholder-color);
+  }
+}
+
+.chevron {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  background-color: var(--bg-color-dropdown);
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(69, 69, 69, 0.21);
+  overflow-y: auto;
+  z-index: 50;
+  transition: .15s linear;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    line-height: 1;
+    padding: 12px 16px;
+    border-radius: 10px;
+    word-break: break-word;
+    cursor: pointer;
+
+    &--active,
+    &:hover {
+      font-weight: 500;
+      color: var(--color-hover);
+      background: var(--bg-color-hover);
+    }
+  }
+
+  &__prepend-icon {
+    position: relative;
+    width: 28px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+
+  &__empty {
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    padding: 0 16px;
+  }
+}
+
+.error {
+  min-height: 16px;
+  color: var(--red-500);
+  margin: 4px 0;
+}
+
+.crossIcon {
+  position: absolute;
+  top: 2px;
+  right: 25px;
+  max-width: 20px;
+  height: auto;
+}

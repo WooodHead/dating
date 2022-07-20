@@ -1,0 +1,24 @@
+@import "styles/general/media";
+
+.wrap {
+  position: relative;
+  height: var(--chat-height);
+  border-right: 1px solid var(--cyan-lighten-200);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chats {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+@include media("max", "md") {
+  .wrap {
+    border-right: none;
+  }
+}

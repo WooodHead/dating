@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'New York Large';
+    src: url('NewYorkLarge-Black.eot');
+    src: url('NewYorkLarge-Black.eot?#iefix') format('embedded-opentype'),
+        url('NewYorkLarge-Black.woff2') format('woff2'),
+        url('NewYorkLarge-Black.woff') format('woff'),
+        url('NewYorkLarge-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York Large';
+    src: url('NewYorkLarge-Medium.eot');
+    src: url('NewYorkLarge-Medium.eot?#iefix') format('embedded-opentype'),
+        url('NewYorkLarge-Medium.woff2') format('woff2'),
+        url('NewYorkLarge-Medium.woff') format('woff'),
+        url('NewYorkLarge-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York Large';
+    src: url('NewYorkLarge-Bold.eot');
+    src: url('NewYorkLarge-Bold.eot?#iefix') format('embedded-opentype'),
+        url('NewYorkLarge-Bold.woff2') format('woff2'),
+        url('NewYorkLarge-Bold.woff') format('woff'),
+        url('NewYorkLarge-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York Large';
+    src: url('NewYorkLarge-Regular.eot');
+    src: url('NewYorkLarge-Regular.eot?#iefix') format('embedded-opentype'),
+        url('NewYorkLarge-Regular.woff2') format('woff2'),
+        url('NewYorkLarge-Regular.woff') format('woff'),
+        url('NewYorkLarge-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York Large';
+    src: url('NewYorkLarge-Semibold.eot');
+    src: url('NewYorkLarge-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('NewYorkLarge-Semibold.woff2') format('woff2'),
+        url('NewYorkLarge-Semibold.woff') format('woff'),
+        url('NewYorkLarge-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'New York Large';
+    src: url('NewYorkLarge-Heavy.eot');
+    src: url('NewYorkLarge-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('NewYorkLarge-Heavy.woff2') format('woff2'),
+        url('NewYorkLarge-Heavy.woff') format('woff'),
+        url('NewYorkLarge-Heavy.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

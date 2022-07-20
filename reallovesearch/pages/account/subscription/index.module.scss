@@ -1,0 +1,29 @@
+@import "styles/general/media";
+
+.plans {
+  margin: 66px 0;
+  display: flex;
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+@include media("max", "md") {
+  .plans {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  .plan {
+    max-width: none;
+  }
+}
+
+@media (max-width: 490px) {
+  .plans {
+    grid-template-columns: 1fr;
+  }
+}

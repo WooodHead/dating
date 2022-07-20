@@ -1,0 +1,22 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: rgba(132, 122, 135, 0.2);
+  border: 1px solid #D9D1D5;
+  border-radius: 10px;
+  padding: 24px;
+  width: 100%;
+  max-width: 494px;
+  min-height: 183px;
+  cursor: pointer;
+}
+
+.icon {
+  --size: 30px;
+  width: var(--size);
+  height: var(--size);
+  background-color: #FAF8FF;
+  border-radius: var(--size);
+  padding: 3px;
+}

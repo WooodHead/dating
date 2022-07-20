@@ -1,0 +1,39 @@
+@import "styles/general/media";
+
+.share {
+  margin-left: 70px;
+}
+
+.wrap {
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  justify-content: space-between;
+}
+
+@include media("max", "xl") {
+  .wrap {
+    grid-gap: 16px;
+  }
+
+  .title {
+    grid-column: 1 / 4;
+  }
+
+  .share {
+    margin-left: 0;
+  }
+}
+
+@include media("max", "sm") {
+  .wrap {
+    margin-bottom: 16px;
+  }
+}
+
+@include media("max", "xs") {
+  .actions {
+    grid-column: 1 / 4;
+    justify-content: flex-start;
+  }
+}

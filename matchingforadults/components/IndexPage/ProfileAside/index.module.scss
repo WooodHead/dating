@@ -1,0 +1,50 @@
+@import "styles/general/media";
+
+.aside {
+  position: absolute;
+  top: 0;
+  left: 16px;
+  bottom: 0;
+  min-height: calc(100vh - var(--header-height));
+  min-width: 288px;
+  background-color: var(--white);
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100%;
+    background: var(--white);
+    z-index: 1;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+@include media("max", "lg") {
+  .aside {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: var(--header-height);
+    overflow-y: auto;
+    padding: 0 16px;
+    z-index: 50;
+    display: none;
+
+    &--is-open {
+      display: block;
+      overflow-y: auto;
+    }
+  }
+}
+
+@include media("max", "md") {
+  .aside {
+    top: var(--header-height-mobile);
+  }
+}

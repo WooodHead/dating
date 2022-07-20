@@ -1,0 +1,108 @@
+version: '3.7'
+services:
+
+  nest:
+    build: docker/nodejs
+    entrypoint: /bin/sh -c "npm i && npm run start:dev"
+    ports:
+    - 8080:8080
+    volumes:
+      - "./backend:/www"
+
+  seeder:
+    build: docker/nodejs
+    volumes:
+      - "./backend:/www"
+
+  loveisahead:
+    container_name: loveisahead
+    build: docker/nodejs
+    volumes:
+      - "./loveisahead:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn dev"
+
+  matchyoursecondhalf:
+    container_name: matchyoursecondhalf
+    build: docker/nodejs
+    volumes:
+      - "./matchyoursecondhalf:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn dev"
+
+  reallovesearch:
+    container_name: reallovesearch
+    build: docker/nodejs
+    volumes:
+      - "./reallovesearch:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn dev"
+
+  bestdatingever:
+    container_name: bestdatingever
+    build: docker/nodejs
+    volumes:
+      - "./bestdatingever:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn dev"
+
+  matchingforadults:
+    container_name: matchingforadults
+    build: docker/nodejs
+    volumes:
+      - "./matchingforadults:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn dev"
+
+
+  nginx:
+    build: docker/nginx
+    depends_on:
+      - nest
+    ports:
+      - "80:80"
+      - "443:443"
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - "./:/www"
+      - "./docker/nginx/conf.d/development.conf:/etc/nginx/nginx.conf:ro"
+#      - "./docker/nginx/conf.d/development.conf:/etc/nginx/conf.d/default.conf"
+  db:
+    image: mongo:5.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      - "MONGO_INITDB_DATABASE=${DOCKER_DATABASE}"
+      - "MONGO_INITDB_ROOT_USERNAME=${DOCKER_USERNAME}"
+      - "MONGO_INITDB_ROOT_PASSWORD=${DOCKER_PASSWORD}"
+    volumes:
+      - database:/data/db
+      - "./mongo/snapshot:/dumps"
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+
+  php:
+    build: docker/php-fpm
+    depends_on:
+      - db
+    sysctls:
+      net.core.somaxconn: 8192
+    ports:
+      - 8000:8000
+    volumes:
+      - "./:/www"
+      - "./docker/php-fpm/php.ini_dev:/usr/local/etc/php/conf.d/custom.ini"
+    environment:
+      - "DOCKER_PHP_CONFIG=${DOCKER_PHP_CONFIG}"
+      - "DOCKER_XDEBUG=${DOCKER_XDEBUG}"
+      - "DOCKER_SUPERVISOR=${DOCKER_SUPERVISOR}"
+      - "DOCKER_CRON=${DOCKER_CRON}"
+      - "PHP_IDE_CONFIG=serverName=PHPStormDocker"
+      - "XDEBUG_CONFIG=remote_host=${DOCKER_XDEBUG} remote_enable=1"
+      - "PHP_OPCACHE_VALIDATE_TIMESTAMPS=1"
+
+volumes:
+  database:
+
+

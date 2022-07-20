@@ -1,0 +1,59 @@
+.notification {
+  position: relative;
+  width: 100%;
+  padding: 16px 50px 16px 24px;
+  background-color: var(--grey-800);
+  margin-bottom: 4px;
+  border-radius: 24px;
+  transition: .1s linear;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--grey-700);
+  }
+}
+
+.title {
+  margin-bottom: 4px;
+}
+
+.icon-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.line {
+  width: 1px;
+  height: 40px;
+  background-color: var(--white);
+  margin: 0 20px;
+}
+
+$count-of-messages: 100;
+$scale: 0;
+$scaleStep: 0.1;
+$posTop: 0px;
+$posTopStep: 14px;
+
+.cascade {
+  @for $order from 1 through $count-of-messages {
+    &--order-#{$order} {
+      position: absolute;
+      top: calc(100% + #{$posTop});
+      transform: scale(1 - $scale);
+      z-index: $count-of-messages - $order;
+      @if $order == 2 {
+        background-color: #353535;
+      }
+      @if $order == 3 {
+        background-color: #222222;
+      }
+    }
+    $scale: $scale + $scaleStep;
+    $posTop: $posTop + $posTopStep;
+    @if $order >= 3 {
+      $posTop: 0px;
+    }
+  }
+}

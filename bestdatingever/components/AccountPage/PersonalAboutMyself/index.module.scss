@@ -1,0 +1,21 @@
+@import "styles/general/media";
+
+.info {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.delete-account {
+  display: flex;
+  margin-top: 14px;
+  margin-left: 50px;
+  white-space: nowrap;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@include media("max", "sm") {
+  .delete-account {
+    margin-left: 16px;
+  }
+}

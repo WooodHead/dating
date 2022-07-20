@@ -1,0 +1,31 @@
+.user {
+  margin-bottom: 24px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__avatar {
+    position: relative;
+    --ava-size: 72px;
+    width: var(--ava-size);
+    height: var(--ava-size);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+}
+
+.line {
+  --item-size: 5px;
+  display: block;
+  margin: 0 4px;
+  &:after {
+    content: '|';
+  }
+}

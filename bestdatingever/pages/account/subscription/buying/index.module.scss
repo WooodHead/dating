@@ -1,0 +1,50 @@
+@import "styles/general/media";
+
+.subtitle {
+  margin-bottom: 85px;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 95px;
+}
+
+.plan {
+  width: 100%;
+  max-width: 450px;
+  margin-right: 80px;
+}
+
+.form {
+  width: 100%;
+  max-width: 450px;
+}
+
+@include media("max", "md") {
+  .plan {
+    margin-right: 32px;
+  }
+}
+
+@include media("max", "sm") {
+  .subtitle {
+    margin-bottom: 40px;
+  }
+
+  .wrap {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .plan {
+    max-width: 100%;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .form {
+    max-width: 100%;
+  }
+}

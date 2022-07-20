@@ -1,0 +1,28 @@
+.wrap {
+  position: relative;
+}
+
+.switcher {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 16px 0;
+  background: var(--white);
+  box-shadow: 0px 0px 10px rgba(209, 209, 209, 0.45);
+  border-radius: 20px;
+
+  &__item {
+    padding: 8px 16px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--blue-600);
+    }
+  }
+}

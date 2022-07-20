@@ -1,0 +1,32 @@
+.custom-scroll {
+  --track-color: rgba(0,0,0,0.025);
+  --thumb-color: rgba(0,0,0,0.05);
+  --thumb-hover-color: rgba(0,0,0,0.1);
+  --thumb-active-color: rgba(0,0,0,.2);
+
+  &.dark {
+    --track-color: transparent;
+    --thumb-color: var(--gold-400);
+    --thumb-hover-color: var(--gold-500);
+    --thumb-active-color: var(--gold-500);
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: var(--track-color);
+  }
+  &::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: var(--thumb-color);
+  }
+  &::-webkit-scrollbar-thumb:hover{
+    background: var(--thumb-hover-color);
+  }
+  &::-webkit-scrollbar-thumb:active{
+    background: var(--thumb-active-color);
+  }
+}

@@ -1,0 +1,36 @@
+@import "styles/general/media";
+
+.article {
+  max-width: 540px;
+}
+
+.position {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: var(--gold-300);
+    margin: 0 8px;
+  }
+}
+
+.language {
+  &:after {
+    content: ',';
+    display: inline-block;
+    margin-right: 4px;
+  }
+  &:last-child:after {
+    content: '';
+  }
+}
+
+@include media("max", "md") {
+  .public-box-title {
+    display: none;
+  }
+}

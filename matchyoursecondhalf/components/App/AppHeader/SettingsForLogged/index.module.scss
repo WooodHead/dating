@@ -1,0 +1,27 @@
+@import "styles/general/media";
+
+.notifications {
+  position: relative;
+
+  &__count {
+    --size: 14px;
+    position: absolute;
+    top: 1px;
+    right: -5px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    background-color: var(--grey-400);
+    font-size: 8px;
+    color: var(--grey-800);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media("max", "md") {
+      top: -3px;
+      right: -9px;
+    }
+  }
+}

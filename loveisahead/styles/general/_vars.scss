@@ -1,0 +1,56 @@
+:root {
+  // - - - - - FONTS - - - - - //
+  --Lato                : 'Lato', sans-serif;
+  --Gilroy              : 'Gilroy', sans-serif;
+  --base-font-size      : 14px;
+  --base-font-color     : #323B52;
+  --base-line-height    : 1.5;
+  --base-body-color     : #FFFFFF;
+
+  // - - - - - COLORS - - - - - //
+  //--grey-100            : #F1F1F1;
+  --grey-200            : #FCFCFC;
+  --grey-300            : #F5F5F5;
+  --grey-400            : #EBEBEB;
+  --grey-500            : #DFDDDA;
+  --grey-600            : #8B8B8B;
+  --grey-700            : #535150;
+  --grey-800            : #3F3F3F;
+  --grey-900            : #2C2C2C;
+  --grey-gradient-1     : radial-gradient(102.41% 162.76% at -2.41% -2.36%, rgba(255, 255, 255, 0.2048) 0%, rgba(49, 55, 56, 0.0446667) 28.11%, rgba(255, 255, 255, 0.0576) 100%);
+
+  --red-500             : #D12626;
+
+  //--gold-100            : #FFF9E8;
+  --gold-200            : #FDF9EC;
+  --gold-300            : #E6D197;
+  --gold-400            : #D0AB5E;
+  --gold-500            : #C1913D;
+  --gold-neutral-500    : #9A8F73;
+  --gold-gradient-1     : linear-gradient(272.87deg, #E6D197 -45.12%, #FAF5BD -45.12%, #E8D696 -17.31%, #CDB575 16.66%, #D0B26B 49.43%, #D0AB5E 85.36%, #C1913D 161.79%);
+  --gold-gradient-2     : linear-gradient(154.33deg, rgba(255, 251, 239, 0.8) -5.12%, rgba(255, 248, 230, 0.930355) 39.08%, rgba(255, 247, 225, 0.8) 99.94%);
+
+  --blue-500            : #5988B2;
+  --blue-700            : #0D5DA7;
+  --blue-800            : #323B52;
+
+  --orange-600          : #EF4D1A;
+  --orange-700          : #C8532E;
+
+  --green-700           : #058C02;
+  --green-500           : #38CA58;
+
+  --white               : #FFFFFF;
+
+  --black-800           : #3D3C3B;
+  --black-900           : #121212;
+
+  // - - - - - COMPONENTS SIZES - - - - - //
+  --header-height       : 60px;
+  --header-height-mobile: 48px;
+  --main-height         : 516px;
+  --chat-height          : calc(100vh - var(--header-height));
+
+  // - - - - - TRANSITION - - - - - //
+  //--fade-duration       : .25s;
+}

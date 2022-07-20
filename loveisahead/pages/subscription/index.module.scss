@@ -1,0 +1,20 @@
+@import "styles/general/media";
+
+.wrap {
+  align-self: flex-start;
+}
+
+.inner-wrap {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.plans {
+  margin-bottom: 0;
+}
+
+@include media("max", "md") {
+  .button-wrap {
+    justify-content: flex-start;
+  }
+}

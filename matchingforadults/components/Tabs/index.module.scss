@@ -1,0 +1,31 @@
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 20px;
+}
+
+.tab {
+  text-align: center;
+  user-select: none;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--pink-700);
+    border-radius: 2px;
+    transition: .15s linear;
+  }
+
+  &--active {
+    font-weight: bold;
+    color: var(--pink-700);
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

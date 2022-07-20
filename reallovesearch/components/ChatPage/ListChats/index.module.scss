@@ -1,0 +1,53 @@
+@import "styles/general/media";
+
+.wrap {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  height: calc(100vh - var(--header-height));
+  margin-bottom: 60px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.no-message-icon {
+  width: 140px;
+  margin-bottom: 40px;
+}
+
+.text {
+  padding: 16px;
+  background-color: #EAEAF4;
+  border-radius: 10px;
+  color: var(--blue-900);
+}
+
+.mobile-chat {
+  &__sidebar {
+    display: none;
+    margin-bottom: 40px;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__room {
+    height: var(--chat-height);
+    margin-bottom: 40px;
+  }
+
+  &__room > div:first-of-type {
+    height: 100%;
+  }
+}
+
+@include media("max", "lg") {
+  .wrap {
+    grid-template-columns: 350px 1fr;
+  }
+}

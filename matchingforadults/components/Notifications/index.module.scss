@@ -1,0 +1,44 @@
+@import "styles/general/media";
+
+.container {
+  position: absolute;
+  top: calc(100% + 16px);
+  right: 0;
+  width: 420px;
+  z-index: 50;
+}
+
+.wrap {
+  @extend .container;
+  color: var(--base-font-color);
+  background: var(--white);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 2px 5px rgba(228, 228, 228, .8);
+}
+
+.cascade {
+  @extend .container;
+
+  &__btn-clear {
+    background-color: var(--grey-800);
+    border-radius: 10px;
+    margin-bottom: 4px;
+  }
+}
+
+@include media("max", "md") {
+  .container {
+    position: fixed;
+    top: 66px;
+    right: 16px;
+  }
+}
+
+@include media("max", "sm") {
+  .container {
+    width: calc(100% - 32px);
+  }
+}

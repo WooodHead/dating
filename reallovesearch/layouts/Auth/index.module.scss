@@ -1,0 +1,26 @@
+@import "styles/general/media";
+
+.main {
+  display: flex;
+  align-items: center;
+  background: right center no-repeat url(/img/auth/auth-bg.svg);
+  min-height: 800px;
+}
+
+@include media("max", "xl") {
+  .main {
+    background: none;
+  }
+}
+
+@include media("max", "md") {
+  .main {
+    margin-top: var(--header-height-mobile);
+  }
+}
+
+@include media("max", "sm") {
+  .main {
+    min-height: 600px;
+  }
+}

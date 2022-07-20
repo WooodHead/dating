@@ -1,0 +1,125 @@
+version: '3.7'
+services:
+
+  nest:
+    build: docker/nodejs
+    restart: always
+    entrypoint: /bin/sh -c "npm i && rm -rf ./dist && npm run build && npm run start"
+#    ports:
+#      - 8080:8080
+    volumes:
+      - "./backend:/www"
+
+  seeder:
+    build: docker/nodejs
+    volumes:
+      - "./backend:/www"
+
+  loveisahead:
+    container_name: loveisahead
+    build: docker/nodejs
+    restart: always
+#    ports:
+#      - 8080:3000
+    volumes:
+      - "./loveisahead:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn build && yarn start"
+
+  matchyoursecondhalf:
+    container_name: matchyoursecondhalf
+    build: docker/nodejs
+    restart: always
+ #   ports:
+ #     - 8081:3000
+    volumes:
+      - "./matchyoursecondhalf:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn build && yarn start"
+
+  reallovesearch:
+    container_name: reallovesearch
+    build: docker/nodejs
+    restart: always
+ #   ports:
+ #     - 8081:3000
+    volumes:
+      - "./reallovesearch:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn build && yarn start"
+
+  bestdatingever:
+    container_name: bestdatingever
+    build: docker/nodejs
+    restart: always
+    volumes:
+      - "./bestdatingever:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn build && yarn start"
+
+  matchingforadults:
+    container_name: matchingforadults
+    build: docker/nodejs
+    restart: always
+    volumes:
+      - "./matchingforadults:/www"
+    entrypoint: /bin/sh -c "cd /www && yarn && yarn build && yarn start"
+
+  nginx:
+    build: docker/nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - "./:/www"
+      - "./docker/nginx/conf.d/production_com.conf:/etc/nginx/nginx.conf:ro"
+      - "/etc/letsencrypt:/etc/letsencrypt"
+      - "dating_certbot:/var/www/certbot"
+
+  certbot:
+    hostname: certbot
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew -w /var/www/certbot; sleep 12h & wait $${!}; done;'"
+    image: certbot/certbot
+    depends_on:
+      - nginx
+    volumes:
+      - "/etc/letsencrypt:/etc/letsencrypt"
+      - "dating_certbot:/var/www/certbot"
+
+  db:
+    image: mongo:5.0
+    restart: always
+    ports:
+      - "27017:27017"
+    environment:
+      - "MONGO_INITDB_DATABASE=${DOCKER_DATABASE}"
+      - "MONGO_INITDB_ROOT_USERNAME=${DOCKER_USERNAME}"
+      - "MONGO_INITDB_ROOT_PASSWORD=${DOCKER_PASSWORD}"
+    volumes:
+      - database:/data/db
+      - "./mongo/snapshot:/dumps"
+
+
+  php:
+    build: docker/php-fpm
+    depends_on:
+      - db
+    sysctls:
+      net.core.somaxconn: 8192
+    ports:
+      - 8000:8000
+    volumes:
+      - "./:/www"
+      - "./docker/php-fpm/php.ini_dev:/usr/local/etc/php/conf.d/custom.ini"
+    environment:
+      - "DOCKER_PHP_CONFIG=${DOCKER_PHP_CONFIG}"
+      - "DOCKER_XDEBUG=${DOCKER_XDEBUG}"
+      - "DOCKER_SUPERVISOR=${DOCKER_SUPERVISOR}"
+      - "DOCKER_CRON=${DOCKER_CRON}"
+      - "PHP_IDE_CONFIG=serverName=PHPStormDocker"
+      - "XDEBUG_CONFIG=remote_host=${DOCKER_XDEBUG} remote_enable=1"
+      - "PHP_OPCACHE_VALIDATE_TIMESTAMPS=1"
+
+volumes:
+  database:
+  dating_certbot:
+
+networks:
+  default:

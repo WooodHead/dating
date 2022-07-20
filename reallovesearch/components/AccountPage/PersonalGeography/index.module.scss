@@ -1,0 +1,23 @@
+@import "styles/general/media";
+
+.wrap {
+  margin-bottom: 80px;
+}
+
+.content {
+  &__fields {
+    max-width: 230px;
+  }
+}
+
+.button {
+  margin-top: 40px;
+}
+
+@include media("max", "sm") {
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

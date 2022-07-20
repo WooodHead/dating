@@ -1,0 +1,27 @@
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/-1;
+}
+
+.loader {
+  --size: 70px;
+  width: var(--size);
+  height: var(--size);
+  animation: loader 1.4s ease-in-out infinite;
+
+  &--md {
+    --size: 50px;
+  }
+
+  &--sm {
+    --size: 30px;
+  }
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}

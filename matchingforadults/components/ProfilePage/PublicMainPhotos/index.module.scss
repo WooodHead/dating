@@ -1,0 +1,22 @@
+@import "styles/general/media";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 70px;
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+  }
+}
+
+@include media("max", "xs") {
+  .list {
+    grid-gap: 8px;
+  }
+}

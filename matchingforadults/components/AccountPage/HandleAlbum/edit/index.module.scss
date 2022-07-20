@@ -1,0 +1,83 @@
+@import "styles/general/media";
+
+.title {
+  display: flex;
+}
+
+.amount {
+  margin-top: 6px;
+}
+
+.form {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.upload {
+  width: 272px;
+  min-width: 272px;
+  margin-right: 24px;
+}
+
+.field {
+  width: 100%;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+@include media("max", "md") {
+  .list {
+    grid-gap: 8px;
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upload {
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+
+  .form {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+
+  .field {
+    & > div:first-of-type {
+      max-width: none;
+    }
+  }
+
+  .title {
+    flex-direction: column;
+  }
+
+  .amount {
+    margin-top: 0;
+  }
+}
+
+@include media("max", "xs") {
+  .upload {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

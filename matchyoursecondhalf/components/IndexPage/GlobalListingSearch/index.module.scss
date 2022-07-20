@@ -1,0 +1,60 @@
+@import "styles/general/media";
+
+.head {
+  user-select: none;
+}
+
+.body {
+  &__row {
+    display: grid;
+    grid-template-columns: 180px 180px 234px 342px;
+    grid-column-gap: 64px;
+  }
+}
+
+.range--disabled {
+  opacity: .4;
+}
+
+@include media("max", "xl") {
+  .body {
+    &__row {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@include media("max", "lg") {
+  .body {
+    &__row {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .gender > div:first-of-type {
+    display: block;
+    width: 100%;
+  }
+}
+
+@include media("max", "sm") {
+  .body {
+    &__row {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 0px;
+    }
+  }
+
+  .user-checkboxes {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .submit {
+    button {
+      width: 100%;
+    }
+  }
+}

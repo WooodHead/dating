@@ -1,0 +1,98 @@
+@import "styles/general/media";
+
+.wrap {
+  margin-bottom: 40px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.upload {
+  width: 300px;
+  min-width: 300px;
+}
+
+.info {
+  margin-left: 60px;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.label {
+  min-width: 90px;
+
+  &--radio {
+    min-width: 120px;
+  }
+}
+
+.field {
+  width: 100%;
+  max-width: 200px;
+}
+
+.age {
+  width: 200px;
+  & input {
+    max-width: 50px;
+  }
+
+  & input::-webkit-outer-spin-button,
+  & input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  & input[type=number] {
+    -moz-appearance: textfield;
+  }
+}
+
+.status {
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: calc(90px + 16px);
+  gap: 16px;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    padding: 10px 22px 10px 16px;
+    background: var(--blue-50);
+    border-radius: 10px;
+  }
+}
+
+@include media("max", "xl") {
+  .upload {
+    min-width: 220px;
+  }
+}
+
+@include media("max", "md") {
+  .content {
+    flex-direction: column;
+  }
+
+  .info {
+    margin-top: 32px;
+    margin-left: 0;
+  }
+}
+
+@include media("max", "xs") {
+  .upload {
+    width: 100%;
+  }
+}

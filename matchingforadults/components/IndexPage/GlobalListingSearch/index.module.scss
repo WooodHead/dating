@@ -1,0 +1,67 @@
+@import "styles/general/media";
+
+.form {
+  position: relative;
+  padding: 32px 24px;
+  background-color: var(--white);
+}
+
+.head {
+  user-select: none;
+}
+
+.body {
+  &__row {
+    display: grid;
+    grid-template-columns: 241px 342px 1fr;
+    grid-column-gap: 32px;
+  }
+}
+
+.range--disabled {
+  opacity: .4;
+}
+
+@include media("max", "xl") {
+  .body {
+    &__row {
+      grid-template-columns: 200px 200px 1fr;
+    }
+  }
+}
+
+@include media("max", "lg") {
+  .body {
+    &__row {
+      grid-template-columns: 230px 230px 1fr;
+    }
+  }
+}
+
+@include media("max", "md") {
+  .body {
+    &__row {
+      grid-template-columns: 1fr;
+
+    }
+  }
+
+  .btn-filters {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+  }
+
+  .user-checkboxes {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+}
+
+@include media("max", "xs") {
+  .form {
+    padding-top: 80px;
+  }
+}

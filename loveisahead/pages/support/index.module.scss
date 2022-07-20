@@ -1,0 +1,13 @@
+@import "styles/general/media";
+
+@include media("max", "sm") {
+  .form {
+    border-radius: 0;
+    padding: 40px 20px;
+    max-width: none;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

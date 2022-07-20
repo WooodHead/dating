@@ -1,0 +1,29 @@
+@import "styles/general/media";
+
+.wrap {
+  //width: 313px;
+}
+
+.content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.upload {
+  width: 313px;
+  margin-bottom: 30px;
+}
+
+.row {
+  margin-bottom: 50px;
+}
+
+@include media("max", "md") {
+  .row {
+    margin-bottom: 32px;
+  }
+
+  .status {
+    margin-bottom: 48px;
+  }
+}

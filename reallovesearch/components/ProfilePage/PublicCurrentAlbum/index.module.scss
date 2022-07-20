@@ -1,0 +1,29 @@
+@import "styles/general/media";
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 74px;
+}
+
+@include media("max", "md") {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+}
+
+@include media("max", "xs") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+}

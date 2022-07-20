@@ -1,0 +1,12 @@
+.wrap {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  height: calc(100vh - var(--header-height));
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 24px;
+  overflow: hidden;
+}

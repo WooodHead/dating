@@ -1,0 +1,39 @@
+@import "styles/general/media";
+
+.message-container {
+  margin-left: auto;
+  max-width: 45%;
+}
+
+.text-block {
+  background: #887BFC;
+  border-radius: 10px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 8px;
+  flex-wrap: wrap;
+}
+
+.aside-wrap {
+  flex-grow: 1;
+}
+
+.time {
+  margin-right: 4px;
+  span {
+    color: #FFFFFF;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@include media("max", "sm") {
+  .message-container {
+    max-width: 90%;
+  }
+}

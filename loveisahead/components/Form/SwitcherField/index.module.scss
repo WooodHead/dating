@@ -1,0 +1,76 @@
+$switcher-color: #5B676D;
+
+.checkbox {
+  //--switcher-color: #5B676D;
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+
+  &__wrap {
+    --color-border: var(--blue-500);
+    --color-bg: transparent;
+  }
+
+  &--dark {
+    --color-border: var(--gold-400);
+    --color-bg: transparent;
+  }
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  & + label:before {
+    --current-width: 34px;
+    --current-height: 20px;
+    content: '';
+    display: inline-block;
+    vertical-align: text-top;
+    width: var(--current-width);
+    min-width: var(--current-width);
+    height: var(--current-height);
+    min-height: var(--current-height);
+    background-color: $switcher-color;
+    border: 1px solid $switcher-color;
+    border-radius: var(--current-height);
+  }
+
+  & + label .checkmark {
+    --checkmark-size: 16px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: var(--checkmark-size);
+    height: var(--checkmark-size);
+    background-color: var(--white);
+    border-radius: var(--checkmark-size);
+    transition: .1s linear;
+  }
+
+  // Box focus
+  &:focus + label:before {
+    box-shadow: 0 2px 6px rgba(118, 0, 73, .17);
+  }
+
+  // Box checked
+  &:checked + label:before {
+    background: var(--green-700);
+  }
+
+  // Disabled state label.
+  &:disabled + label {
+    cursor: auto;
+    opacity: .5;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + label .checkmark {
+    left: 16px;
+  }
+
+  &--required + label:before {
+    border-color: var(--red-500);
+  }
+}

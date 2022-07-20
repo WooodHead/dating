@@ -1,0 +1,29 @@
+@import "styles/general/media";
+
+.wrap {
+  width: 100%;
+  padding-left: 32px;
+}
+
+.content {
+  width: 100%;
+}
+
+@include media("max", "lg") {
+  .wrap {
+    padding-left: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+  .wrap {
+    padding-left: 0;
+  }
+}
+
+@include media("max", "md") {
+  .title {
+    margin-top: 0;
+  }
+}

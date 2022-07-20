@@ -1,0 +1,61 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+}
+
+.map-wrap {
+  width: 400px;
+  height: 217px;
+  margin-right: 54px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.list {
+  padding-left: 54px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    margin-bottom: 16px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: #D8D6EE;
+  }
+}
+
+@include media("max", "md") {
+  .wrap {
+    flex-direction: column;
+  }
+
+  .map-wrap {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .list {
+    margin-top: 16px;
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}

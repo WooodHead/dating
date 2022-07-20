@@ -1,0 +1,11 @@
+@import "styles/general/media";
+
+.wrap {
+  max-width: 800px;
+}
+
+@include media("max", "lg") {
+  .wrap {
+    max-width: none;
+  }
+}

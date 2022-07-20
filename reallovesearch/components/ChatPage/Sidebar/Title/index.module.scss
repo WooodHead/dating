@@ -1,0 +1,17 @@
+@import "styles/general/media";
+
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.unread-count {
+  background: var(--orange-700);
+}
+
+@include media("max", "sm") {
+  .wrap {
+    margin-bottom: 8px;
+  }
+}

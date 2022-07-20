@@ -1,0 +1,77 @@
+@import "styles/general/media";
+
+.list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+  margin-bottom: 60px;
+  grid-row-gap: 20px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 4px 16px 0;
+    border-right: 1px solid var(--base-font-color);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: .7;
+    cursor: pointer;
+    transition: .1s linear;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      color: var(--orange-300);
+    }
+
+    &--active {
+      position: relative;
+      color: var(--orange-300);
+
+      &:before {
+        --size: 8px;
+        content: '';
+        display: block;
+        width: var(--size);
+        height: var(--size);
+        border-radius: var(--size);
+        background-color: var(--orange-300);
+        position: absolute;
+        top: -22px;
+        left: calc(50% - var(--size) / 2);
+      }
+    }
+  }
+}
+
+@include media("max", "lg") {
+  .list {
+    &__item {
+      font-size: 20px;
+
+      &--active {
+        &:before {
+          top: -18px;
+        }
+      }
+    }
+  }
+}
+
+@include media("max", "md") {
+  .list {
+    &__item {
+      font-size: 18px;
+      line-height: .9;
+
+      &--active {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

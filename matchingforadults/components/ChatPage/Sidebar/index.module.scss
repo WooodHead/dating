@@ -1,0 +1,26 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  height: calc(var(--chat-height) - 100px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+.chats {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+@include media("max", "lg") {
+  .wrap {
+    height: var(--chat-height);
+  }
+}

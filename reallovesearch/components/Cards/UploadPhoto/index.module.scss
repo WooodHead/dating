@@ -1,0 +1,40 @@
+.wrap {
+  position: relative;
+  height: 0;
+  padding-top: 123%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--blue-50);
+  border: 1px solid #D8D6EE;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.icon {
+  --size: 100px;
+  display: block;
+  width: 100%;
+  max-width: var(--size);
+  margin: 0 auto 4px;
+}
+
+.img-uploaded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}

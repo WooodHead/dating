@@ -1,0 +1,9 @@
+.tab {
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 6px 16px;
+
+  &--active {
+    background-color: var(--gold-200);
+  }
+}

@@ -1,0 +1,15 @@
+@import "styles/general/media";
+
+.logo {
+  width: 218px;
+  height: 45px;
+
+  &--sm {
+    width: 120px;
+  }
+
+  @include media("max", "md"){
+    width: 105px;
+    height: 25px;
+  }
+}

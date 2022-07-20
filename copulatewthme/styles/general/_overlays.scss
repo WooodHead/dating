@@ -1,0 +1,33 @@
+@import "styles/general/media";
+
+.form-overlay {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 432px;
+  min-height: 190px;
+  padding: 40px;
+  color: var(--grey-400);
+  background-color: rgb(18, 18, 17, .5);
+  background-image: var(--grey-gradient-1);
+  backdrop-filter: blur(45px);
+  border-radius: 30px;
+
+  &__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+
+  &.wider {
+    max-width: 653px;
+  }
+}
+
+@include media("max", "lg") {
+  .form-overlay {
+    &.wider {
+      max-width: none;
+    }
+  }
+}

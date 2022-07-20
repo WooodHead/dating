@@ -1,0 +1,20 @@
+.wrap {
+  padding-top: 50px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  top: 0;
+}
+
+.prev-arrow {
+  right: 48px;
+}
+
+.next-arrow {
+  right: 8px;
+  transform: rotate(180deg);
+}

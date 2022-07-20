@@ -1,0 +1,17 @@
+.color {
+  &-white {
+    color: var(--white);
+  }
+
+  &-grey-600 {
+    color: var(--grey-600);
+  }
+
+  &-grey-700 {
+    color: var(--grey-700);
+  }
+
+  &-pink-700 {
+    color: var(--pink-700);
+  }
+}

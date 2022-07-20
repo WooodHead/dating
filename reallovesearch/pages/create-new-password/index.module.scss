@@ -1,0 +1,37 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  display: none;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@include media("max", "xl") {
+  .img {
+    display: block;
+  }
+}
+
+@include media("max", "lg") {
+  .img {
+    display: none;
+  }
+
+  .wrap {
+    justify-content: center;
+  }
+
+  .form {
+    max-width: 475px;
+  }
+}

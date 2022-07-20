@@ -1,0 +1,60 @@
+@import "styles/general/media";
+
+.wrap {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 8px;
+  align-items: flex-end;
+}
+
+.field {
+  position: relative;
+
+  &__textarea {
+    display: block;
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    resize: none;
+    border: 1px solid #D9D1D5;
+    border-radius: 10px;
+    background: transparent;
+  }
+
+  &__emoji-switcher {
+    width: 32px;
+    position: absolute;
+    bottom: 10px;
+    right: 8px;
+    cursor: pointer;
+  }
+
+  &__emoji-complete {
+    width: 28px;
+    position: absolute;
+    bottom: 10px;
+    right: 48px;
+    cursor: pointer;
+  }
+
+  &__emoji-picker {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 0;
+  }
+}
+
+.send-btn {
+  height: 50px;
+}
+
+@include media("max", "sm") {
+  .field {
+    &__textarea {
+      font-size: 14px;
+    }
+
+    &__emoji-switcher {
+      bottom: 7px;
+    }
+  }
+}

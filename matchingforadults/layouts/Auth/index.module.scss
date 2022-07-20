@@ -1,0 +1,22 @@
+@import "styles/general/media";
+
+.main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--black-800);
+  overflow: hidden;
+  margin-top: -1px;
+  @include media("max", "lg") {
+    align-items: flex-start;
+  }
+
+  @include media("max", "md") {
+    margin-top: var(--header-height-mobile);
+  }
+
+  @include media("max", "sm"){
+    min-height: auto;
+
+  }
+}

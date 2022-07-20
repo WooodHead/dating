@@ -1,0 +1,36 @@
+@import "styles/general/media";
+
+.main {
+  min-height: calc(100vh - var(--header-height));
+  position: relative;
+}
+
+.wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content {
+  width: 100%;
+
+  &--is-logged {
+    padding-left: var(--profile-aside);
+  }
+}
+
+.container {
+  padding-top: var(--main-container-pt);
+  padding-left: var(--main-container-pl);
+}
+
+@include media("max", "lg") {
+  .content--is-logged {
+    padding-left: 0;
+  }
+}
+
+@include media("max", "md"){
+  .main {
+    margin-top: var(--header-height-mobile);
+  }
+}

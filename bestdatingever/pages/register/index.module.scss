@@ -1,0 +1,69 @@
+@import "styles/general/media";
+
+.wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background-color: rgba(255, 255, 255, .8);
+  z-index: 2;
+}
+
+.form {
+  color: var(--white);
+}
+
+.radio-input-group {
+  max-width: 270px;
+}
+
+.input-group {
+  min-width: 270px;
+  justify-content: space-between;
+}
+
+.register-button-container {
+  width: 350px;
+  margin: 0 auto;
+}
+
+@include media("max", "xl") {
+  .input-group-container {
+    flex-direction: column;
+  }
+
+  .radio-group-container {
+    flex-direction: column;
+  }
+}
+
+@include media("max", "md") {
+  .wrap {
+    padding: 50px 0;
+  }
+}
+
+@include media("max", "sm") {
+  .wrap {
+    padding: 0;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 24px 18px 48px 18px;
+  }
+
+  .register-button-container {
+    min-width: auto;
+    width: 100%;
+  }
+}

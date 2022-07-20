@@ -1,0 +1,21 @@
+@import "styles/general/media";
+
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  color: #693B24;
+}
+
+.unread-count {
+  background: var(--orange-700);
+}
+
+@include media("max", "sm") {
+  .wrap {
+    margin-bottom: 8px;
+  }
+}

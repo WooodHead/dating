@@ -1,0 +1,23 @@
+@import "styles/general/media";
+
+.message-container {
+  margin-left: auto;
+  max-width: 49%;
+}
+
+.text-block {
+  background: var(--cyan-100);
+  border-radius: 4px 4px 0 4px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@include media("max", "sm") {
+  .message-container {
+    max-width: 90%;
+  }
+}

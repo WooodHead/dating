@@ -1,0 +1,39 @@
+@import "styles/general/media";
+
+.wrap {
+  position: relative;
+  padding-top: 40px;
+  margin-bottom: 32px;
+
+  &__bg {
+    width: 100vw;
+    height: 0;
+    padding-top: 20%;
+    background: top / cover no-repeat url(/img/profile/bg-slider.jpg);
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50vw);
+    z-index: 1;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+@include media("max", "md") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+  }
+}

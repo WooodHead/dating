@@ -1,0 +1,150 @@
+@import "styles/general/media";
+
+.pos-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card {
+  position: relative;
+  height: 0;
+  padding-top: 132%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:after {
+    @extend .pos-over;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(47, 48, 73, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    transition: .15s linear;
+
+  }
+  &:hover:after,
+  &:hover .edit {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.card__active {
+  &:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content {
+  @extend .pos-over;
+  z-index: 3;
+}
+
+.permissions {
+  @extend .pos-over;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  opacity: .8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  padding: 16px;
+
+  --child-bg: rgba(7, 33, 64, 0.5);
+
+  &__icon {
+    --size: 70px;
+    background: var(--child-bg);
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+    min-height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    background: var(--child-bg);
+    border-radius: 30px;
+    padding: 4px 18px;
+    text-align: center;
+  }
+}
+
+.edit {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+    .check {
+      background: #149689;
+      border-color: transparent;
+
+      &__icon {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.check {
+  --size: 32px;
+  height: var(--size);
+  width: var(--size);
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    opacity: 0;
+  }
+}
+
+@include media("max", 'md') {
+  .permissions {
+
+    &__icon {
+      --size: 40px;
+
+      img {
+        width: 15px;
+        margin-bottom: 0;
+      }
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

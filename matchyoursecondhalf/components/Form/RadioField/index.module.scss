@@ -1,0 +1,74 @@
+.wrap {
+  &--gold {
+    --current-color: var(--gold-400);
+  }
+
+  &--blue {
+    --current-color: var(--blue-600);
+  }
+}
+
+.field {
+  position: absolute;
+  opacity: 0;
+
+  & + .radio {
+    position: relative;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Box.
+  & + .radio:before {
+    --current-width: 20px;
+    content: '';
+    display: block;
+    width: var(--current-width);
+    min-width: var(--current-width);
+    height: var(--current-width);
+    min-height: var(--current-width);
+    background: transparent;
+    border: 2px solid var(--current-color);
+    border-radius: var(--current-width);
+  }
+
+  // Box hover
+  //&:hover + .radio:before {
+  //  box-shadow: 0 0 20px rgba(166, 166, 166, .5);
+  //}
+
+  // Box focus
+  &:focus + .radio:before {
+    box-shadow: 0 2px 6px rgba(118, 0, 73, .17);
+  }
+
+  // Box checked
+  &:checked + .radio:before {
+    background: var(--purple);
+  }
+
+  // Disabled state .radio.
+  &:disabled + .radio {
+    cursor: auto;
+    opacity: .5;
+  }
+
+  // Checkmark. Could be replaced with an image
+  &:checked + .radio:after {
+    --size: 12px;
+    content: '';
+    position: absolute;
+    background: var(--current-color);
+    width: var(--size);
+    min-width: var(--size);
+    height: var(--size);
+    min-height: var(--size);
+    border-radius: var(--size);
+  }
+
+  //&--required + .radio:before {
+  //  border-color: var(--red-500);
+  //}
+}

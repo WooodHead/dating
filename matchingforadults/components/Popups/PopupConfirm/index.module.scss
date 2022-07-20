@@ -1,0 +1,43 @@
+@import "styles/general/media";
+
+.popup {
+  margin-top: 7%;
+  margin-bottom: 7%;
+
+  &--md {
+    max-width: 455px;
+  }
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: repeat(2, 126px);
+  grid-column-gap: 32px;
+  grid-row-gap: 16px;
+  justify-content: center;
+
+  &--columns-1 {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+@include media("max", "md") {
+  .children {
+    text-align: left;
+  }
+}
+
+@include media("max", "sm") {
+  .actions {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+  }
+}

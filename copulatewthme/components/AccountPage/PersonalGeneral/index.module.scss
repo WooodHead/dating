@@ -1,0 +1,49 @@
+@import "styles/general/media";
+
+.wrap {
+  padding-bottom: 32px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--gold-300);
+}
+
+.content {
+  padding: 0 32px;
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+.gender {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 140px));
+  grid-column-gap: 60px;
+}
+
+@include media("max", "md") {
+  .content {
+    &__fields {
+      grid-column-gap: 20px;
+    }
+  }
+}
+
+@include media("max", "sm") {
+  .content {
+    padding: 0;
+  }
+}
+
+@include media("max", "xs") {
+  .gender {
+    margin-bottom: 0;
+  }
+
+  .content {
+    &__fields {
+      display: block;
+    }
+  }
+}

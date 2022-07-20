@@ -1,0 +1,11 @@
+@import "styles/general/media";
+
+.sidebar {
+  margin-top: -24px;
+}
+
+@include media("max", "lg") {
+  .sidebar {
+    display: none;
+  }
+}

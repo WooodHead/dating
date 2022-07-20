@@ -1,0 +1,28 @@
+@import "styles/general/media";
+
+.form {
+  display: block;
+  margin-bottom: 66px;
+}
+
+.limit, .cover {
+  position: relative;
+  padding-left: 9px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--pink-300);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+.button {
+  width: 100%;
+  max-width: 325px;
+}

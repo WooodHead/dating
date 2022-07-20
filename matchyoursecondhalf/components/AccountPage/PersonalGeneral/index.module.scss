@@ -1,0 +1,30 @@
+@import "styles/general/media";
+
+.wrap {
+  margin-bottom: 40px;
+}
+
+.content {
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+@include media("max", "md") {
+  .content {
+    &__fields {
+      grid-column-gap: 20px;
+    }
+  }
+}
+
+@include media("max", "xs") {
+  .content {
+    &__fields {
+      display: block;
+    }
+  }
+}

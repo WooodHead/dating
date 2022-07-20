@@ -1,0 +1,35 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form {
+  position: relative;
+  z-index: 2;
+}
+
+@include media("max", "lg") {
+  .wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include media("max", "sm") {
+  .wrap {
+    padding: 0;
+  }
+
+  .form {
+    border-radius: 0;
+    padding: 40px 20px;
+    max-width: none;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

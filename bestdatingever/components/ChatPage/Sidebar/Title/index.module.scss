@@ -1,0 +1,14 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 27px 24px 24px;
+}
+
+@include media("max", "sm") {
+  .wrap {
+    margin-bottom: 8px;
+  }
+}

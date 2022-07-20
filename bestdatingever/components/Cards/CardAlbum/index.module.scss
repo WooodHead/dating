@@ -1,0 +1,125 @@
+@import "styles/general/media";
+
+.pos-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.edit-menu {
+  opacity: 0;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, .7);
+  transition: opacity 0.3s;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+
+}
+
+.card {
+  position: relative;
+  height: 0;
+  padding-top: 74%;
+  overflow: hidden;
+
+  &:hover .edit-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content {
+  @extend .pos-over;
+  z-index: 3;
+}
+
+.permissions {
+  @extend .pos-over;
+  z-index: 1;
+  opacity: .8;
+  backdrop-filter: blur(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background: rgba(3, 21, 57, 0.4);
+    border-radius: 50%;
+  }
+
+  &__text {
+    background: rgba(3, 21, 57, 0.4);
+    padding: 7px 22px;
+    border-radius: 30px;
+  }
+}
+
+.edit {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 1px solid #E1E1E1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  z-index: 10;
+
+  &__close {
+    filter: invert(1);
+    padding: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.edit-button, .delete-button {
+  padding: 12px 40px 12px 18px;
+
+  &:hover {
+    background: var(--cyan-100);
+  }
+}
+
+.name {
+  margin: 12px 0 4px;
+}
+
+@include media("max", "xs") {
+  .edit {
+    right: 0;
+  }
+
+  .edit-button, .delete-button {
+    padding: 12px 24px 12px 12px;
+  }
+}
+

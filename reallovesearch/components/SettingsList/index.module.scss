@@ -1,0 +1,41 @@
+@import "styles/general/media";
+
+.wrap {
+  position: relative;
+}
+
+.dropdown {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: var(--header-height);
+  border-radius: 0;
+  background: var(--white);
+  padding: 30px 0;
+  z-index: 50;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+
+    &:hover {
+      background-color: rgba(170, 170, 170, .5);
+    }
+  }
+}
+
+@include media("max", "md") {
+  .dropdown {
+    top: var(--header-height-mobile);
+  }
+}
+
+@include media("max", "sm") {
+  .dropdown {
+    min-height: var(--main-height);
+  }
+}

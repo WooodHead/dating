@@ -1,0 +1,32 @@
+@import "styles/general/media";
+
+.header {
+  width: 100%;
+  height: var(--header-height);
+  color: var(--white);
+  background-color: var(--black-800);
+  padding: 13px 0;
+
+  &--is-logged {
+    background-color: var(--white);
+  }
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@include media("max", "md"){
+  .header {
+    display: flex;
+    align-items: center;
+    height: var(--header-height-mobile);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+  }
+}

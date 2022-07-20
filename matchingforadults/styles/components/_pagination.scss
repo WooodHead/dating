@@ -1,0 +1,58 @@
+@import '~rc-pagination/assets/index.css';
+
+.rc-pagination {
+  display: flex;
+  align-items: center;
+
+  &-options {
+    margin-left: 0;
+  }
+
+  &-prev,
+  &-next,
+  &-item,
+  &-jump-prev,
+  &-jump-next {
+    --item-size: 32px;
+    min-width: var(--item-size);
+    height: var(--item-size);
+    min-height: var(--item-size);
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 0 4px;
+    padding: 0 4px;
+    line-height: var(--item-size);
+    background-color: var(--white);
+    box-shadow: 8px 4px 16px rgba(41, 41, 41, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:focus {
+      border-color: var(--pink-darken-500);
+    }
+
+    &:hover {
+      border-color: var(--pink-darken-500);
+    }
+
+    &-active {
+      color: var(--white);
+      background-color: var(--pink-darken-500);
+      border-color: var(--pink-darken-500);
+
+      &:hover {
+        border-color: var(--pink-darken-500);
+      }
+    }
+  }
+
+  &-disabled {
+    opacity: .3;
+  }
+}

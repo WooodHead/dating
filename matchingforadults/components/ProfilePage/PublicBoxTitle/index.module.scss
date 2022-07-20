@@ -1,0 +1,17 @@
+@import "styles/general/media";
+
+.title {
+  font-size: 22px;
+}
+
+@include media("max", "md") {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@include media("max", "sm") {
+  .title {
+    font-size: 18px;
+  }
+}

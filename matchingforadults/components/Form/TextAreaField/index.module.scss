@@ -1,0 +1,85 @@
+.wrap {
+  --color-border: #9F9DB2;
+  --color-field-text: var(--base-font-color);
+  --color-field-placeholder: var(--pink-darken-300);
+
+  &--dark {
+    --color-border: var(--grey-600);
+    --color-field-text: var(--white);
+    --color-field-placeholder: var(--grey-600);
+  }
+
+  &--md {
+    max-width: 200px;
+  }
+
+  &--full-width {
+    max-width: 100%;
+  }
+}
+
+.label {
+  display: block;
+  color: var(--color-label);
+  margin-bottom: 8px;
+}
+
+.input {
+  position: relative;
+}
+
+.field {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  max-height: 200px;
+  color: var(--color-field-text);
+  padding: 12px 16px;
+  background: transparent;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  resize: none;
+
+  &--filled {
+    border-bottom-color: var(--white);
+  }
+
+  &--overflow {
+   overflow: hidden;
+  }
+
+  &--outline {
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    background-color: var(--white);
+    height: 80px;
+  }
+
+  &--error {
+    border-color: var(--red-500);
+  }
+}
+
+//.icon {
+//  position: absolute;
+//  top: 50%;
+//  right: 12px;
+//  display: flex;
+//  transform: translateY(-50%);
+//
+//  &--password {
+//    right: 4px;
+//  }
+//}
+
+.helper-text {
+  min-height: 16px;
+  margin: 4px 0;
+}
+
+.error {
+  min-height: 16px;
+  color: var(--red-500);
+  margin: 4px 0;
+}

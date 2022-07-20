@@ -1,0 +1,73 @@
+.pos-over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card {
+  position: relative;
+  height: 0;
+  padding-top: 132%;
+  border-radius: 20px;
+  overflow: hidden;
+
+  &:after {
+    @extend .pos-over;
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(47, 48, 73, 0.5);
+    z-index: 2;
+    cursor: pointer;
+    transition: .15s linear;
+
+  }
+
+  &:hover:after,
+  &:hover .edit {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.thumbnail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.content {
+  @extend .pos-over;
+  z-index: 3;
+}
+
+.permissions {
+  @extend .pos-over;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(74, 60, 33, 0.4) 0%, rgba(74, 60, 33, 0.1) 100%);
+  box-shadow: 0 4px 15px 1px rgba(212, 175, 156, 0.25);
+  opacity: .8;
+  backdrop-filter: blur(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.edit {
+  @extend .pos-over;
+  z-index: 2;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}

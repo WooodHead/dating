@@ -1,0 +1,13 @@
+@import "styles/general/media";
+
+.main {
+  display: flex;
+  position: relative;
+  min-height: var(--main-height);
+}
+
+@include media("max", "md"){
+  .main {
+    margin-top: var(--header-height-mobile);
+  }
+}

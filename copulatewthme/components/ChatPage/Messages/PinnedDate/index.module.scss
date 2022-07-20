@@ -1,0 +1,13 @@
+.wrap {
+  position: sticky;
+  display: inline-block;
+  min-height: 32px;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 32px;
+  border: 1px solid rgba(171, 171, 171, 0.27);
+  box-shadow: 0px 0px 10px rgba(191, 191, 191, 0.31);
+  background: rgba(255, 255, 255, .92);
+  border-radius: 20px;
+}

@@ -1,0 +1,39 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+}
+
+.map-wrap {
+  width: 266px;
+  height: 202px;
+  margin-right: 32px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.list {
+  &__row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media("max", "xl") {
+  .wrap {
+    flex-direction: column;
+    align-items: start;
+    row-gap: 16px;
+  }
+
+  .map-wrap {
+    width: 100%;
+    margin-right: 0;
+  }
+}

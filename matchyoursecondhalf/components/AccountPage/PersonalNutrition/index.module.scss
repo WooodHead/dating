@@ -1,0 +1,36 @@
+@import "styles/general/media";
+
+.wrap {
+  margin-bottom: 120px;
+}
+
+.content {
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-column-gap: 100px;
+  }
+}
+
+.button {
+  margin-top: 32px;
+}
+
+@include media("max", "md") {
+  .content {
+    &__fields {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+}
+
+@include media("max", "sm") {
+
+  .button {
+    margin-top: 20px;
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "styles/general/media";
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 140px;
+}
+
+.aside {
+  min-width: 310px;
+  margin-right: 32px;
+}
+
+.content {
+  width: 100%;
+}
+
+@include media("max", "lg") {
+  .aside {
+    min-width: 260px;
+  }
+}
+
+@include media("max", "md") {
+  .profile {
+    flex-direction: column;
+  }
+
+  .aside {
+    min-width: auto;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+
+  .similar-profile {
+    display: none;
+
+    &--mobile {
+      display: block;
+    }
+  }
+}

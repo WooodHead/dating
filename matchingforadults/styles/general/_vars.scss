@@ -1,0 +1,53 @@
+@import "styles/general/media";
+
+:root {
+  // - - - - - FONTS - - - - - //
+  --OpenSans            : 'Open Sans', sans-serif;
+  --Palatino            : 'Palatino', sans-serif;
+  --base-font-size      : 16px;
+  --base-font-color     : #3E2841;
+  --base-line-height    : 1.5;
+  --base-body-color     : #F7F5F6;
+
+  // - - - - - COLORS - - - - - //
+  --grey-200            : #DADADA;
+  --grey-600            : #848484;
+  --grey-700            : #787173;
+  --grey-800            : #3F3F3F;
+
+  --pink-400            : #F6E7EC;
+  --pink-500            : #D9D1D5;
+  --pink-700            : #A16294;
+
+  --pink-darken-300     : #98939A;
+  --pink-darken-500     : #847A87;
+
+  --red-500             : #D12626;
+
+  --green-500           : #38CA58;
+  --green-600           : #2FB01A;
+  --green-700           : #058C02;
+
+  --white               : #FFFFFF;
+
+  --black-800           : #25262A;
+  //--black-900           : #121212;
+
+  // - - - - - COMPONENTS SIZES - - - - - //
+  --main-container-pt   : 40px;
+  --main-container-pl   : 16px;
+  --header-height       : 73px;
+  --header-height-mobile: 48px;
+  --main-height         : 516px;
+  --chat-title-height   : 36px;
+  --chat-title-mb       : 8px;
+  --chat-height         : calc(100vh - var(--header-height) - var(--main-container-pt) - var(--chat-title-height) - var(--chat-title-mb));
+  --profile-aside       : 288px;
+
+  // - - - - - TRANSITION - - - - - //
+  //--fade-duration       : .25s;
+
+  @include media("max", "lg") {
+    --main-container-pl: 0;
+  }
+}

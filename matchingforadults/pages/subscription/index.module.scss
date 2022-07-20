@@ -1,0 +1,21 @@
+@import "styles/general/media";
+
+.wrap {
+  align-self: flex-start;
+  background: url('/img/auth/bg-auth.png') no-repeat bottom left;
+}
+
+.inner-wrap {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.plans {
+  margin-bottom: 0;
+}
+
+@include media("max", "md") {
+  .plan {
+    border: 3px solid #FFFFFF;
+  }
+}

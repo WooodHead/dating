@@ -1,0 +1,29 @@
+@import "styles/general/media";
+
+.wrap {
+  position: relative;
+}
+
+.component {
+  text-decoration: underline;
+}
+
+.actions {
+  &-mobile {
+    display: none;
+  }
+}
+
+@include media("max", "md") {
+  .actions {
+    &-web {
+      display: none;
+    }
+
+    &-mobile {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+  }
+}

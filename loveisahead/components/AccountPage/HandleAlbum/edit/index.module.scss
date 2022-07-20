@@ -1,0 +1,78 @@
+@import "styles/general/media";
+
+.form {
+  display: flex;
+  margin-bottom: 66px;
+}
+
+.upload {
+  width: 170px;
+  min-width: 170px;
+  margin-right: 60px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+@include media("max", "md") {
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .fields {
+    width: 100%;
+  }
+
+  .text-field {
+    & > div:first-of-type {
+      max-width: none;
+    }
+  }
+
+  .select {
+    & > div:first-of-type > div:first-of-type {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+
+  .upload {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 470px) {
+  .form {
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .fields {
+    margin-top: 16px;
+  }
+}
+
+@include media("max", "xs") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

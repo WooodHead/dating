@@ -1,0 +1,46 @@
+@import "styles/general/media";
+
+.wrap {
+  margin-bottom: 40px;
+}
+
+.content {
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}
+
+@include media("max", "md") {
+  .content {
+    &__fields {
+      grid-column-gap: 24px;
+    }
+  }
+}
+
+@include media("max", "sm") {
+  .content {
+    padding: 0;
+    &__sizes {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 24px;
+    }
+  }
+
+  .sizes-filed > div:nth-of-type(1) {
+    width: 100%;
+  }
+
+}
+
+@include media("max", "xs") {
+  .content {
+    &__fields {
+      display: block;
+    }
+  }
+}

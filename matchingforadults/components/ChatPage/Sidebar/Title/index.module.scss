@@ -1,0 +1,8 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--chat-title-mb);
+  height: var(--chat-title-height);
+}

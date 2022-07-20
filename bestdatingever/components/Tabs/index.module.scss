@@ -1,0 +1,27 @@
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--cyan-lighten-200);
+}
+
+.tab {
+  text-align: center;
+  user-select: none;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: var(--orange-300);
+  }
+
+  &--active {
+    color: var(--orange-300);
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

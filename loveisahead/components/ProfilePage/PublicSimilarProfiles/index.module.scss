@@ -1,0 +1,46 @@
+.user {
+  margin-bottom: 16px;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 16px;
+    background: left/auto repeat url(/img/general/line-dashed.svg);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    &:after {
+      display: none;
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    --ava-size: 72px;
+    width: var(--ava-size);
+    height: var(--ava-size);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+}
+
+.dot {
+  --item-size: 5px;
+  display: block;
+  width: var(--item-size);
+  min-width: var(--item-size);
+  height: var(--item-size);
+  min-height: var(--item-size);
+  background: linear-gradient(271.4deg, #FBF8D1 -13.26%, #FFD895 98.34%);
+  border-radius: var(--item-size);
+  margin: 0 8px;
+}

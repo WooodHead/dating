@@ -1,0 +1,31 @@
+@import "styles/general/media";
+
+.avatar {
+  position: relative;
+  height: 0;
+  padding-top: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #D9D1D5;
+  margin: 8px 0 16px;
+}
+
+.actions {
+  padding: 20px;
+}

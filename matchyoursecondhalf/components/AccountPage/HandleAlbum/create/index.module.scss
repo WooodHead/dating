@@ -1,0 +1,49 @@
+@import "styles/general/media";
+
+.form {
+  display: flex;
+  margin-bottom: 66px;
+}
+
+.upload {
+
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 40px;
+  min-width: 120px;
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 16px;
+  }
+}
+
+@include media("max", "xs") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+
+  .fields {
+    width: 100%;
+  }
+
+  .text-field {
+    & > div:first-of-type {
+      max-width: none;
+    }
+  }
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

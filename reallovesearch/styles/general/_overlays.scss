@@ -1,0 +1,14 @@
+.form-overlay {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 344px;
+  min-height: 190px;
+  color: var(--blue-900);
+
+  &__btn-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+}

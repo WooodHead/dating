@@ -1,0 +1,13 @@
+@import '~rc-slider/assets/index.css';
+
+.rc-slider {
+  &-mark {
+    top: -25px;
+    left: 12px;
+    width: 90%;
+  }
+
+  &-disabled {
+    background-color: transparent;
+  }
+}

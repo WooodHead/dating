@@ -1,0 +1,16 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 56px 0 80px;
+}
+
+.img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 48px;
+}

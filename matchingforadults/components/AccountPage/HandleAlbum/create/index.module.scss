@@ -1,0 +1,78 @@
+@import "styles/general/media";
+
+.form {
+  margin-bottom: 60px;
+}
+
+.title {
+  display: flex;
+}
+
+.amount {
+  margin-top: 6px;
+}
+
+.list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 24px;
+  margin-bottom: 40px;
+  min-width: 120px;
+}
+
+.limit, .cover {
+  position: relative;
+  padding-left: 9px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--pink-300);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+@include media("max", "md") {
+  .list {
+    grid-gap: 8px;
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 8px;
+  }
+
+  .title {
+    flex-direction: column;
+  }
+
+  .amount {
+    margin-top: 0;
+  }
+}
+
+@include media("max", "xs") {
+  .fields {
+    width: 100%;
+  }
+
+  .text-field {
+    & > div:first-of-type {
+      max-width: none;
+    }
+  }
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

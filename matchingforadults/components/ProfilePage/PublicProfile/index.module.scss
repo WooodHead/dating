@@ -1,0 +1,42 @@
+@import "styles/general/media";
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.aside {
+  min-width: 288px;
+  margin-right: 16px;
+}
+
+.content {
+  width: 100%;
+}
+
+@include media("max", "md") {
+  .profile {
+    flex-direction: column;
+  }
+
+  .aside {
+    min-width: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-column-gap: 16px;
+    margin-right: 0;
+    margin-bottom: 32px;
+  }
+}
+
+@include media("max", "sm") {
+  .profile {
+    flex-direction: column;
+  }
+
+  .aside {
+    grid-template-columns: 1fr;
+  }
+}

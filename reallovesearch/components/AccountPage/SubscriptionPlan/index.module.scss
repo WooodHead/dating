@@ -1,0 +1,88 @@
+@import "styles/general/media";
+
+.plan {
+  position: relative;
+  width: 100%;
+  padding: 32px 30px 40px 30px;
+  background: #FFFFFF;
+
+  .plan__header {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #C4C4C4;
+  }
+
+  .plan__body {
+    .accesses {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 20px;
+      margin-bottom: 0;
+
+      .access-icon {
+        margin-right: 11px;
+        margin-left: 3px;
+      }
+
+      .access-text {
+        color: #54544B;
+      }
+
+      li ~ li {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  .plan__action {
+    margin-top: 26px;
+
+    .actions-active {
+      min-height: 48px;
+    }
+  }
+
+  &--active {
+    background: #F6FAFE;
+  }
+}
+
+.plan-default:not(:last-child) {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: #C4C4C4;
+  }
+}
+
+.plan-single {
+  border-radius: 20px;
+  box-shadow: 0px 0px 24px 4px rgba(0, 0, 0, 0.08);
+}
+
+@include media("max", "xl") {
+  .plan {
+    padding: 32px 15px 40px 15px;
+  }
+}
+
+@include media("max", "sm") {
+  .plan {
+    .plan__header {
+      .plan-icon {
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-default {
+    max-width: none;
+  }
+}

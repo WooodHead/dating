@@ -1,0 +1,38 @@
+.wrap {
+  position: relative;
+  height: 0;
+  padding-top: 132%;
+  overflow: hidden;
+  outline: 2px solid #CFE3F0;
+  box-shadow: 8px 4px 16px rgba(41, 41, 41, 0.12);
+  border-radius: 12px;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.icon {
+  display: block;
+  margin: 0 auto 4px;
+  width: 100%;
+}
+
+.img-uploaded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}

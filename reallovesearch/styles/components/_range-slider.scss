@@ -1,0 +1,41 @@
+@import '~rc-slider/assets/index.css';
+@import "styles/general/media";
+
+
+.rc-slider {
+  &-mark {
+    top: 23px;
+    left: 29px;
+    width: 79%;
+
+    &-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 74px;
+      height: 50px;
+      border: 1px solid var(--blue-200);
+      border-radius: 10px;
+    }
+  }
+
+  &-disabled {
+    background-color: transparent;
+  }
+}
+
+@include media("max", "md") {
+  .rc-slider-mark {
+    width: 100%;
+    left: 0;
+
+    span {
+      transform: none !important;
+    }
+
+    span ~ span {
+      left: unset !important;
+      right: 0;
+    }
+  }
+}

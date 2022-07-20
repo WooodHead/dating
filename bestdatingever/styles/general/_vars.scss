@@ -1,0 +1,55 @@
+:root {
+  // - - - - - FONTS - - - - - //
+  --Avenir              : 'Avenir', sans-serif;
+  --NewYorkLarge        : 'New York Large', sans-serif;
+  --base-font-size      : 16px;
+  --base-font-color     : #4B5064;
+  --base-line-height    : 1.5;
+  --base-letter-spacing : .3px;
+  --base-body-color     : #FFFFFF;
+
+  // - - - - - COLORS - - - - - //
+  --grey-200            : #F9FAFB;
+  --grey-600            : #888B97;
+  --grey-700            : #535150;
+  --grey-800            : #3F3F3F;
+
+  --cyan-lighten-200    : #E1E5F4;
+  --cyan-lighten-300    : #D8ECF0;
+
+  --cyan-100            : #F0FAFC;
+  --cyan-200            : #B4EAF3;
+  --cyan-300            : #7EEBFD;
+  --cyan-500            : #347B91;
+  --cyan-700            : #1F5768;
+  --cyan-800            : #1A4A59;
+
+  --cyan-darken-400     : #718D96;
+  --cyan-darken-700     : #42717F;
+
+  --red-400             : #D5475E;
+  --red-500             : #D12626;
+
+  --orange-200          : #EA927F;
+  --orange-300          : #FF947C;
+  --orange-500          : #E15557;
+  --orange-gradient-1   : linear-gradient(80.11deg, #DA6D2F -10.56%, #EF2F4E 115.17%);;
+
+
+  --green-700           : #058C02;
+  --green-500           : #38CA58;
+
+  --white               : #FFFFFF;
+
+  --black-800           : #3D3C3B;
+  --black-900           : #121212;
+
+  // - - - - - COMPONENTS SIZES - - - - - //
+  --header-height       : 60px;
+  --header-height-mobile: 48px;
+  --main-height         : 516px;
+  --chat-height          : calc(100vh - var(--header-height));
+
+  // - - - - - TRANSITION - - - - - //
+  //--fade-duration       : .25s;
+}

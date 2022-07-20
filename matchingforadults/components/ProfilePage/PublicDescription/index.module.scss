@@ -1,0 +1,71 @@
+@import "styles/general/media";
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__name {
+    width: 50%;
+    font-size: 30px;
+  }
+}
+
+.position {
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: #D9D1D5;
+    margin: 0 8px;
+  }
+}
+
+.language {
+  &:after {
+    content: ',';
+    display: inline-block;
+    margin-right: 4px;
+  }
+  &:last-child:after {
+    content: '';
+  }
+}
+
+.btn-message {
+  font-weight: bold;
+  background-color: #004830;
+  border-radius: 8px;
+  padding: 11px 33px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+@include media("max", "xl") {
+  .title {
+    &__name {
+      font-size: 24px;
+    }
+  }
+
+  .btn-message {
+    padding: 11px;
+    font-size: 14px;
+  }
+}
+
+@include media("max", "sm") {
+  .title {
+    &__name {
+      font-size: 20px;
+    }
+  }
+
+  .btn-message {
+    font-size: 12px;
+  }
+}

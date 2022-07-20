@@ -1,0 +1,79 @@
+stages:
+  - test
+  - build
+
+sast:
+  stage: test
+include:
+- template: Security/SAST.gitlab-ci.yml
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+  DOCKER_TLS_VERIFY: ""
+
+.build: &build
+   stage: build
+   image: docker:stable
+   services: 
+     - docker:dind 
+   before_script:
+     - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+   script:     
+     - echo $IMAGE_NAME
+     - echo $DIRNAME
+     - echo $CI_COMMIT_BRANCH
+     - echo $CI_COMMIT_REF_SLUG
+     - echo $DIRNAME:$CI_COMMIT_REF_SLUG
+     - echo ${CI_REGISTRY_IMAGE}/$DIRNAME:${CI_COMMIT_REF_SLUG}
+     - ls
+     - ls loveisahead/
+     - docker build -t ${CI_REGISTRY_IMAGE}/$DIRNAME:${CI_COMMIT_REF_SLUG} -f $DIRNAME/Dockerfile .
+     - echo ${CI_REGISTRY_IMAGE}/$DIRNAME:${CI_COMMIT_REF_SLUG}
+     - echo ${CI_REGISTRY_IMAGE}/$DIRNAME:${CI_COMMIT_REF_SLUG}
+     - docker push ${CI_REGISTRY_IMAGE}/$DIRNAME:${CI_COMMIT_REF_SLUG}
+     - echo "Success"
+   tags:
+      - docker
+
+build:backend:
+  <<: *build
+  variables:
+    IMAGE_NAME: backend  
+    DIRNAME: backend
+
+build:loveisahead:
+  <<: *build
+  variables:
+    IMAGE_NAME: loveisahead
+    DIRNAME: loveisahead
+    
+build:matchyoursecondhalf:
+  <<: *build
+  variables:
+    IMAGE_NAME: matchyoursecondhalf
+    DIRNAME: matchyoursecondhalf
+
+build:reallovesearch:
+  <<: *build
+  variables:
+    IMAGE_NAME: reallovesearch  
+    DIRNAME: reallovesearch  
+
+build:matchingforadults:
+  <<: *build
+  variables:
+    IMAGE_NAME: matchingforadults
+    DIRNAME: matchingforadultsh 
+
+build:bestdatingever:
+  <<: *build
+  variables:
+    IMAGE_NAME: bestdatingever  
+    DIRNAME: bestdatingever
+
+build:seeder:
+  <<: *build
+  variables:
+    IMAGE_NAME: seeder
+    DIRNAME: seeder

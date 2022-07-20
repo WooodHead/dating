@@ -1,0 +1,39 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: flex-start;
+}
+
+.content {
+  width: 100%;
+  padding-left: 150px;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 100px 0;
+}
+
+@include media("max", "xl") {
+  .content {
+    padding-left: 50px;
+  }
+}
+
+@include media("max", "md") {
+  .wrap {
+    flex-direction: column;
+  }
+
+  .content {
+    padding-left: 0;
+  }
+}
+
+@include media("max", "sm") {
+  .button {
+    margin: 20px 0 40px;
+  }
+}

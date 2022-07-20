@@ -1,0 +1,20 @@
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/-1;
+}
+
+.loader {
+  --size: 150px;
+  width: var(--size);
+  height: var(--size);
+
+  &--md {
+    --size: 70px;
+  }
+
+  &--sm {
+    --size: 30px;
+  }
+}

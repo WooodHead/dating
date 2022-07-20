@@ -1,0 +1,38 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 168px;
+  height: 44px;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 10px;
+  padding: 6px;
+  font-family: var(--Avenir);
+  font-size: 16px;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+
+  &:hover {
+    background: var(--gold-200);
+  }
+
+  //&--disabled {
+  //  opacity: .5;
+  //  cursor: not-allowed;
+  //}
+
+  //&--sm {
+  //  min-width: 98px;
+  //  height: 38px;
+  //  font-size: 16px;
+  //}
+}
+
+.icon-prepend {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}

@@ -1,0 +1,39 @@
+.user {
+  display: block;
+  background-color: #FBFBFB;
+  border: 1px solid #F0F0F0;
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 24px;
+  //cursor: pointer;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__avatar {
+    position: relative;
+    --ava-size: 72px;
+    width: var(--ava-size);
+    height: var(--ava-size);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+}
+
+.dot {
+  --item-size: 5px;
+  display: block;
+  width: var(--item-size);
+  min-width: var(--item-size);
+  height: var(--item-size);
+  min-height: var(--item-size);
+  background: var(--orange-200);
+  border-radius: var(--item-size);
+  margin: 0 8px;
+}

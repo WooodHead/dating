@@ -1,0 +1,7 @@
+@import "styles/general/media";
+
+@include media("max", "lg") {
+  .sidebar {
+    display: none;
+  }
+}

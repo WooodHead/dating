@@ -1,0 +1,62 @@
+@import '~rc-pagination/assets/index.css';
+
+.rc-pagination {
+  display: flex;
+  align-items: center;
+
+  &-options {
+    margin-left: 0;
+  }
+
+  &-prev,
+  &-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Gilroy);
+    margin: 0;
+  }
+
+  &-item,
+  &-jump-prev,
+  &-jump-next {
+    --item-size: 25px;
+    min-width: var(--item-size);
+    height: var(--item-size);
+    min-height: var(--item-size);
+    border: 1px solid var(--gold-400);
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 0 7px;
+    padding: 0 4px;
+    line-height: var(--item-size);
+    color: var(--blue-800);
+    font-family: var(--Gilroy);
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:focus {
+      border-color: var(--blue-700);
+    }
+
+    &:hover {
+      border-color: var(--blue-700);
+    }
+
+    &-active {
+      color: var(--white);
+      background-color: var(--blue-700);
+      border-color: var(--blue-700);
+
+      &:hover {
+        border-color: var(--blue-700);
+      }
+    }
+  }
+
+  &-disabled {
+    opacity: .3;
+  }
+}

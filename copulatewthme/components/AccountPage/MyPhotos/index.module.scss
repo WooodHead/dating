@@ -1,0 +1,23 @@
+@import "styles/general/media";
+
+.wrap {
+  width: 100%;
+  padding-left: 32px;
+}
+
+.title {
+  font-weight: 800;
+}
+
+@include media("max", "lg") {
+  .wrap {
+    padding-left: 0;
+  }
+}
+
+@include media("max", "sm") {
+  .title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}

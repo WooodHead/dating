@@ -1,0 +1,31 @@
+.list {
+  position: relative;
+  display: flex;
+  margin-left: -24px;
+  //z-index: 2;
+}
+
+.col {
+  padding-left: 24px;
+  background-clip: padding-box;
+
+  &:nth-child(2) > div:first-child {
+    padding-top: 58%;
+  }
+
+  &:nth-child(1) > div:nth-child(3),
+  &:nth-child(3) > div:nth-child(3), {
+    padding-top: 58%;
+  }
+}
+
+.bg {
+  display: block;
+  width: 100vw;
+  height: 524px;
+  background-color: #F5F5F5;
+  position: absolute;
+  top: 92px;
+  left: calc(50% - 50vw);
+  z-index: -1;
+}

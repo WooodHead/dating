@@ -1,0 +1,26 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(65, 65, 65, 0.6);
+}
+
+.gallery {
+  position: relative;
+}
+
+.btn-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.icon-close {
+  filter: drop-shadow(0 2px 2px #1a1a1a);
+}

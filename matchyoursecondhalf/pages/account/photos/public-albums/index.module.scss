@@ -1,0 +1,8 @@
+@import "styles/general/media";
+
+@include media("max", "sm") {
+ .wrap {
+   flex-direction: column;
+   row-gap: 16px;
+ }
+}

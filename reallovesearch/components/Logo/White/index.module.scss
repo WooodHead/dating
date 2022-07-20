@@ -1,0 +1,13 @@
+@import "styles/general/media";
+
+.logo {
+  width: 213px;
+  height: 22px;
+}
+
+@include media("max", "md") {
+  .logo {
+    width: 100px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,45 @@
+@import "styles/general/media";
+
+.userWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 10px 0 10px 5px;
+  border-bottom: 1px solid #EFD9C9;
+
+  &:hover {
+    background: var(--gold-gradient-2);
+  }
+
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 300px;
+
+    @include media("max", "sm") {
+      max-width: 100px;
+    }
+  }
+}
+
+.nameWrapper {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  margin-left: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+

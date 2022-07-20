@@ -1,0 +1,58 @@
+@import "styles/general/media";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: top / cover no-repeat url(/img/auth/bg-contact-us.jpg);
+}
+
+.info {
+  max-width: 345px;
+  margin-right: 16px;
+}
+
+.form {
+  width: 100%;
+  max-width: 360px;
+
+  &-overlay {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 985px;
+    padding: 80px;
+  }
+}
+
+.contact-us-circle {
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+@include media("max", "lg") {
+  .form-overlay {
+    padding: 40px;
+  }
+}
+
+@include media("max", "md") {
+  .form {
+    max-width: none;
+    margin-top: 40px;
+
+    &-overlay {
+      border-radius: 0;
+      padding: 40px 20px;
+      max-width: none;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .contact-us-circle {
+    display: none;
+  }
+}

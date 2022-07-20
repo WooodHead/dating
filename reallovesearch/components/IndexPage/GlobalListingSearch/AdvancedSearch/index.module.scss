@@ -1,0 +1,20 @@
+@import "styles/general/media";
+
+.row {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}
+
+.icon {
+  --size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  background: var(--grey-200);
+  border-radius: 5px;
+}

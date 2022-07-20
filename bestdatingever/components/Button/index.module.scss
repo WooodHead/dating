@@ -1,0 +1,128 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  height: 50px;
+  outline: none;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 4px;
+  padding: 12px 8px 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .15s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    filter: drop-shadow(0 0 20px rgba(166, 166, 166, .5));
+  }
+
+  &:after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+  }
+
+  &:active:after {
+    width: 0;
+    height: 0;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    visibility: visible;
+    transition: 0s;
+  }
+
+  &--solid {
+    color: var(--white);
+    background: var(--orange-500);
+  }
+
+  &--disabled {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
+  &--sm {
+    min-width: 126px;
+    height: 44px;
+  }
+
+  &--lg {
+    min-width: 211px;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--gradient {
+    color: var(--white);
+    background: var(--orange-gradient-1);
+
+    &:hover {
+      filter: drop-shadow(0 0 20px rgba(50, 59, 82, .3));
+    }
+  }
+
+  &--blue {
+    color: var(--white);
+    background: var(--base-font-color);
+
+    &:hover {
+      filter: drop-shadow(0 0 20px rgba(50, 59, 82, .3));
+    }
+  }
+
+  &--outline {
+    color: var(--orange-500);
+    border-color: var(--orange-500);
+    background: transparent;
+
+    &-blue {
+      color: var(--base-font-color);
+      border-color: var(--base-font-color);
+    }
+  }
+
+  &--events-none {
+    pointer-events: none;
+  }
+
+  &--loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--orange-500);
+    cursor: default;
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &-blue {
+      background: var(--base-font-color);
+    }
+
+    &-gradient {
+      background: var(--orange-gradient-1);
+    }
+  }
+}

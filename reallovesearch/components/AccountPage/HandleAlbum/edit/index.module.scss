@@ -1,0 +1,84 @@
+@import "styles/general/media";
+
+.form {
+  display: flex;
+  margin-bottom: 66px;
+}
+
+.upload {
+  width: 300px;
+  min-width: 300px;
+  margin-right: 40px;
+}
+
+.field {
+  width: 100%;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  margin-bottom: 40px;
+}
+
+.limit {
+  position: relative;
+  padding-left: 9px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: var(--pink-300);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+}
+
+@include media("max", "md") {
+  .list {
+    grid-gap: 8px;
+  }
+}
+
+@include media("max", "sm") {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upload {
+    margin-right: 0px;
+    margin-bottom: 16px;
+  }
+
+  .form {
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+
+  .field {
+    & > div:first-of-type {
+      max-width: none;
+    }
+  }
+}
+
+@include media("max", "xs") {
+  .upload {
+    width: 100%;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .button {
+    button {
+      width: 100%;
+    }
+  }
+}

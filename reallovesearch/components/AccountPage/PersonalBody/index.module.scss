@@ -1,0 +1,15 @@
+.wrap {
+  padding-bottom: 32px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--gold-300);
+}
+
+.content {
+  padding: 0 32px;
+
+  &__fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 80px;
+  }
+}

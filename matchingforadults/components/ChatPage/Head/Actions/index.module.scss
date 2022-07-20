@@ -1,0 +1,28 @@
+.wrap {
+  position: relative;
+  align-self: flex-start;
+}
+
+.switcher {
+  cursor: pointer;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: var(--white);
+  box-shadow: 0 0 5px rgba(149, 139, 147, 0.26);
+  border-radius: 10px;
+
+  &__item {
+    padding: 8px 16px;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &:hover {
+      background: #FCF8FA;
+    }
+  }
+}

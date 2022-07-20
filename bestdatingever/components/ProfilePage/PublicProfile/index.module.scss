@@ -1,0 +1,38 @@
+@import "styles/general/media";
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 140px;
+}
+
+.aside {
+  min-width: 364px;
+  padding-right: 52px;
+  margin-right: 48px;
+}
+
+.content {
+  width: 100%;
+}
+
+@include media("max", "md") {
+  .profile {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .aside {
+    min-width: auto;
+    width: 100%;
+    padding-right: 0;
+    margin-right: 0;
+    display: flex;
+  }
+}
+
+@include media("max", "sm") {
+  .aside {
+    flex-direction: column;
+  }
+}

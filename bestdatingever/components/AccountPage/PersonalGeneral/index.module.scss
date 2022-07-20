@@ -1,0 +1,77 @@
+@import "styles/general/media";
+
+.wrap {
+
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 80px;
+  margin-bottom: 70px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 135px 1fr;
+
+  &__radio {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+    margin-bottom: 40px;
+
+    &-field {
+      display: flex;
+    }
+  }
+}
+
+@include media("max", "xl") {
+  .content {
+    grid-column-gap: 30px;
+  }
+}
+
+@include media("max", "lg") {
+  .content {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    &__radio {
+      grid-template-columns: 1fr;
+      margin-bottom: 0;
+
+      &-field {
+        flex-direction: column;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .radios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    grid-gap: 24px;
+  }
+}
+
+@include media("max", "md") {
+  .content {
+    padding: 0;
+  }
+}
+
+//@include media("max", "xs") {
+//  .gender {
+//    margin-bottom: 0;
+//  }
+//
+//  .content {
+//    &__fields {
+//      display: block;
+//    }
+//  }
+//}

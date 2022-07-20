@@ -1,0 +1,23 @@
+@import "styles/general/media";
+
+.message-container {
+  margin-right: auto;
+  max-width: 45%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.avatar {
+  margin-right: 8px;
+}
+
+.text-block {
+  background: #F3F7FC;
+  border-radius: 10px 10px 10px 0px;
+}
+
+@include media("max", "sm") {
+  .message-container {
+    max-width: 90%;
+  }
+}

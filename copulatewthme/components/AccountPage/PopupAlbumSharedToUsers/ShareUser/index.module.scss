@@ -1,0 +1,27 @@
+.personWrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 15px;
+  min-height: 36px;
+}
+
+.btn {
+  &--loader {
+    position: absolute;
+    right: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+
+    svg path {
+      fill: var(--white);
+    }
+
+    &-dark {
+      background: transparent;
+    }
+  }
+}

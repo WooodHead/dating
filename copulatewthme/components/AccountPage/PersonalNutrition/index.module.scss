@@ -1,0 +1,42 @@
+@import "styles/general/media";
+
+.wrap {
+  padding-bottom: 32px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--gold-300);
+}
+
+.content {
+  padding: 0 32px;
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-column-gap: 100px;
+  }
+}
+
+.button {
+  margin-top: 80px;
+}
+
+@include media("max", "md") {
+  .content {
+    &__fields {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+  }
+}
+
+@include media("max", "sm") {
+  .content {
+    padding: 0;
+  }
+
+  .button {
+    margin-top: 20px;
+    button {
+      width: 100%;
+    }
+  }
+}

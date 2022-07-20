@@ -1,0 +1,24 @@
+body {
+  font-family: var(--OpenSans);
+  font-size: var(--base-font-size);
+  color: var(--base-font-color);
+  line-height: var(--base-line-height);
+  background-color: var(--base-body-color);
+  overflow-y: scroll;
+
+  &.hidden {
+    overflow: hidden;
+  }
+}
+
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "styles/general/media";
+
+.wrap {
+  position: relative;
+  overflow-y: scroll;
+  height: 500px;
+  padding-left: 50px;
+
+  @include media("max", "md") {
+    padding-left: 0;
+  }
+
+}

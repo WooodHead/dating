@@ -1,0 +1,44 @@
+@import "styles/general/media";
+
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reset-password {
+  max-width: 413px;
+  background: var(--blue-50);
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.img {
+  display: none;
+  flex-basis: 50%;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@include media("max", "xl") {
+  .img {
+    display: block;
+  }
+}
+
+@include media("max", "lg") {
+  .img {
+    display: none;
+  }
+
+  .wrap {
+    justify-content: center;
+  }
+
+  .form {
+    max-width: 475px;
+  }
+}

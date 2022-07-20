@@ -1,0 +1,87 @@
+.wrap {
+  position: relative;
+
+  --color-field: var(--cyan-100);
+  --color-label: var(--base-font-color);
+  --color-border: var(--cyan-500);
+  --color-field-text: var(--base-font-color);
+  --color-label-active: var(--base-font-color);
+
+  &--dark {
+    --color-field: var(--cyan-800);
+    --color-label: var(--white);
+    --color-border: var(--cyan-darken-400);
+    --color-field-text: var(--white);
+    --color-label-active: var(--cyan-300);
+  }
+}
+
+.label {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  color: var(--color-label);
+  pointer-events: none;
+  z-index: 1;
+  transition: .1s linear;
+
+  &--active {
+    top: 6px;
+    color: var(--color-label-active);
+    font-size: 12px;
+  }
+}
+
+.input {
+  position: relative;
+}
+
+.field {
+  position: relative;
+  display: block;
+  width: auto;
+  height: 80px;
+  color: var(--color-field-text);
+  background-color: var(--color-field);
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 4px 4px 0 0;
+  padding: 16px 16px 6px;
+
+  &--xs {
+    height: 51px;
+  }
+
+  &--lg {
+    height: 270px;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--with-label {
+    padding: 24px 16px 6px;
+  }
+
+  &--outline {
+    border-radius: 5px;
+    border: 1px solid var(--cyan-500);
+    background-color: var(--white);
+  }
+
+  &--error {
+    border-color: var(--red-500);
+  }
+}
+
+.helper-text {
+  min-height: 16px;
+  margin: 4px 0;
+}
+
+.error {
+  min-height: 16px;
+  color: var(--red-500);
+  margin: 4px 0;
+}

@@ -1,0 +1,26 @@
+%pseudo {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: #D8D6EE;
+  width: calc(100vw - 16px);
+}
+
+.title {
+  padding: 13px 0 13px 16px;
+  display: flex;
+  position: relative;
+  text-transform: uppercase;
+
+  &::before {
+    @extend %pseudo;
+    top: 0;
+  }
+
+  &::after {
+    @extend %pseudo;
+    bottom: 0;
+  }
+}

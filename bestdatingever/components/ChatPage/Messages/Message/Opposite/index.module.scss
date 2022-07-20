@@ -1,0 +1,22 @@
+@import "styles/general/media";
+
+.message-container {
+  margin-right: auto;
+  max-width: 49%;
+}
+
+.avatar {
+  margin-right: 8px;
+}
+
+.text-block {
+  color: var(--white);
+  background: var(--cyan-darken-700);
+  border-radius: 4px 4px 4px 0;
+}
+
+@include media("max", "sm") {
+  .message-container {
+    max-width: 90%;
+  }
+}

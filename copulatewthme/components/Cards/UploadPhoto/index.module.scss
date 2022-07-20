@@ -1,0 +1,39 @@
+.wrap {
+  position: relative;
+  height: 0;
+  padding-top: 132%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(154.33deg, rgba(255, 251, 239, 0.8) -5.12%, rgba(255, 248, 230, 0.930355) 39.08%, rgba(255, 247, 225, 0.8) 99.94%);
+  user-select: none;
+  cursor: pointer;
+}
+
+.icon {
+  --size: 48px;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  margin: 0 auto 4px;
+}
+
+.img-uploaded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
